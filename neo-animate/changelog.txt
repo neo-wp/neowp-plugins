@@ -1,0 +1,70 @@
+Show full changelog: [https://neo-wp.com/changelog/?ref=wp-org#neo-animate](https://neo-wp.com/changelog/?ref=wp-org#neo-animate)
+
+2026-08-26 Feature     - neoDraw: Be able to specify filenames before saving new neoDraw images
+2026-08-24 Feature     - neoAnimate: Button to create a new neoAnimate drawing in the plugin overview and in neoSettings
+2026-08-17 Improvement - neoGlobal: Safely display occurrences of images in the database for editors
+2026-08-14 Improvement - neoLog: Extended logs for database operations
+2026-08-11 Improvement - neoManagerWporg: Direct installation from the WordPress Plugin Directory
+2026-08-09 Fix         - neoGlobal: Improved database timeout logic for long searches
+2026-08-07 Improvement - neoDraw: Create neoDraw drawing via button in neoSettings
+2026-08-07 Improvement - neoDraw: Create neoDraw drawing via action link list in WP plugin overview
+2026-08-06 Improvement - neoDraw: Removed warning after long time without page refresh because it is no longer needed
+2026-08-05 Improvement - neoSettings: neoWP settings page linked under "Tools" instead of under "Settings"
+2026-08-04 Feature     - neoDraw: Edit regular images directly from the media popup as neoDraw copies
+2026-08-02 Feature     - neoFeedback: Send feedback directly from neoPlugins
+2026-07-29 Improvement - neoDraw: Improved opening of SVGs in the media popup with neoDraw
+2026-07-26 Improvement - neoDraw: Faster loading of the neoDraw editor in the Gutenberg block editor
+2026-07-25 Improvement - neoDraw: Media Gallery popup loads faster with direct integration of the neoDraw button
+2026-07-19 Fix         - neoFreemius: Update for some free users re-enabled
+2026-07-18 Improvement - neoLog: Better compatibility regarding encryption via libsodium
+2026-07-02 Fix         - neoGlobal: Still show detailed usage page with hundreds of entries
+2026-07-01 Improvement - neoGlobal: Robustness regarding neoWP update server for up-to-date plugin lists
+2026-06-30 Improvement - neoLog: Deduplicate certain log lines
+2026-06-13 Improvement - neoSettings: neoWP settings page located under "Settings" by default
+2026-06-11 Feature     - neoDraw: Save neoDraw drawings as SVG in the WordPress media library
+2026-06-11 Feature     - neoDraw: Import existing SVG images into neoDraw and save as a new drawing
+2026-06-11 Feature     - neoDraw: Show neoDraw button on media library attachment edit pages
+2026-06-11 Feature     - neoDraw: Provide neoDraw block for Gutenberg
+2026-06-11 Feature     - neoDraw: Insert neoDraw button in the Classic Editor
+2026-06-11 Feature     - neoDraw: Provide neoDraw actions in the WordPress media selector
+2026-06-11 Feature     - neoDraw: Edit neoDraw files directly from the media library grid view
+2026-06-11 Feature     - neoDraw: Edit neoDraw files directly from the media library list view
+2026-06-11 Feature     - neoDraw: neoDraw control integrated into Elementor
+2026-06-11 Feature     - neoDraw: neoDraw integrated into new Atomic image widgets in Elementor
+2026-06-11 Feature     - neoDraw: Optionally enable SVG uploads for neoDraw
+2026-06-11 Feature     - neoDraw: neoDraw integrated into Bricks
+2026-06-11 Feature     - neoDraw: Support for new Elementor Atomic Image Controls
+2026-06-11 Feature     - neoDraw: Integrate Excalidraw as a drawing surface in WordPress
+2026-06-11 Improvement - neoDraw: neoDraw editor available in German
+2026-06-11 Feature     - neoAnimate: Add, select, play, and delete animation frames in a timeline
+2026-06-11 Feature     - neoAnimate: Set animation duration per frame
+2026-06-11 Feature     - neoAnimate: Support timing modes Sync, Delayed, Overlap, Sequential, and Instant
+2026-06-11 Feature     - neoAnimate: Triggers for visibility, scroll position, mouse position, hover, and loop
+2026-06-11 Feature     - neoAnimate: Create and edit animations directly from neoDraw
+2026-06-11 Feature     - neoAnimate: Make neoAnimate available in the neoDraw editor
+2026-06-10 Improvement - neoDraw: Font handling in the neoDraw editor improved
+2026-06-05 Improvement - neoLog: Improved logs
+2026-06-04 Fix         - neoGlobal: Ensure compatibility with caching plugins such as WP Super Cache
+2026-06-04 Improvement - neoGlobal: Stay on the plugin page after installation instead of redirecting
+2026-05-26 Improvement - neowp: Ensure compatibility with WordPress 7
+2026-05-26 Feature     - neoSettings: Switch to link neoWP under Settings and hide the large menu item
+2026-05-20 Fix         - neoGlobal: Cachebust works on localhost
+2026-04-10 Feature     - neoReset: Button to reset tutorial hints
+2026-04-03 Improvement - neoReset: Clear dropdown for different plugin reset options
+2026-04-02 Improvement - neoSettings: Settings organized and grouped per plugin
+2026-04-02 Improvement - neoSettings: Improved accessibility of the settings page
+2026-03-21 Improvement - neoFreemius: Contact on settings page consolidated into support link
+2026-03-03 Feature     - neoImageCachebust: Update renamed images in Bricks, Elementor, Divi, Gutenberg and Classic Editor via cachebust
+2026-01-30 Improvement - neowp: Improved handling of the font size set in the browser settings
+2026-01-30 Improvement - neoGlobal: Secure log folder name derived from WP secret key
+2026-01-28 Improvement - neoLog: Aggregation of all logs into an additional log file
+2026-01-16 Fix         - neoGlobal: Fixed issue with occasionally missing settings cards
+2026-01-15 Improvement - neoGlobal: Toggled but disabled switches get a slight green tint
+2026-01-14 Fix         - neoGlobal: Robustness against PHP-protected folders due to php.ini open_basedir setting
+2026-01-01 Feature     - neoSettings: Settings page for neoWP
+2026-01-01 Feature     - neoReset: Implementation of neoReset
+2026-01-01 Feature     - neoFreemius: Freemius integration
+2026-01-01 Feature     - neoManagerWporg: Implementation of neoManager
+2023-03-12 Birthday    - neowp: Founding of neoWP
+2023-03-12 Birthday    - neoDraw: Birthday of the idea of neoDraw
+2023-03-12 Feature     - neoAnimate: Birthday of the idea of neoAnimate

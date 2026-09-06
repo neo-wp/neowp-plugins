@@ -1,0 +1,115 @@
+Show full changelog: [https://neo-wp.com/changelog/?ref=wp-org#neo-rename](https://neo-wp.com/changelog/?ref=wp-org#neo-rename)
+
+2026-09-05 Fix         - neoRename: Prevent changes of file type and executable multiple extensions when renaming (Security)
+2026-08-31 Fix         - neoRename: Select exact URL match before partial matches in the rename dialog
+2026-08-31 Feature     - neoAi: Title generation for PDF files
+2026-08-31 Feature     - neoAi: Title generation for text files
+2026-08-31 Feature     - neoAi: Title generation for videos
+2026-08-28 Improvement - neoAi: Conserve the server more already for page-context queries
+2026-08-26 Improvement - neoRename: Tooltips for table actions
+2026-08-25 Improvement - neoRename: Warning for Pagebuilder only when Pagebuilder is open
+2026-08-17 Improvement - neoAi: Faster alt text generation by compressing before AI analysis
+2026-08-17 Improvement - neoGlobal: Securely show occurrences of images in the database to editors as well
+2026-08-14 Improvement - neoLog: Enhanced logs for database operations
+2026-08-14 Fix         - neoRename: Include WordPress 7.1 companion files when renaming
+2026-08-13 Fix         - neoRename: Do not interpret slashes in titles as subfolders when deriving filenames
+2026-08-11 Improvement - neoManagerWporg: Direct installation from the WordPress Plugin Directory
+2026-08-10 Feature     - neoAi: Alt text and title generation for any SVG files possible
+2026-08-09 Improvement - neoRename: Deduplication for original filenames when WordPress creates a -scaled- variant
+2026-08-09 Improvement - neoGlobal: Correct handling of MySQL error 1020 during large database updates
+2026-08-09 Fix         - neoGlobal: Improved database timeout logic for long searches
+2026-08-05 Improvement - neoSettings: neoWP settings page linked under "Tools" instead of under "Settings"
+2026-08-02 Feature     - neoFeedback: Send feedback directly from neoPlugins
+2026-08-02 Improvement - neoRename: In replace mode highlight only changed words in color
+2026-08-02 Improvement - neoRename: Feature for alt texts removed because it became redundant with neoAI
+2026-08-02 Improvement - neoAi: Consider temporary prompt addition in image text generations
+2026-08-02 Improvement - neoAi: Edit custom prompt instructions separately and test with any chosen media library image
+2026-08-02 Improvement - neoAi: Prompt addition possible for bulk generation
+2026-07-29 Fix         - neoGlobal: Support for large URL replacements with small database thread stack configuration
+2026-07-23 Feature     - neoAi: Add custom prompt instructions for titles and alt texts
+2026-07-20 Improvement - neoAi: Highlight Pro quota in the exhausted quota dialog
+2026-07-19 Fix         - neoFreemius: Update re-enabled for some free users
+2026-07-19 Fix         - neoRename: Consider current unsaved alt text during AI generation
+2026-07-18 Improvement - neoLog: Improved compatibility regarding encryption with libsodium
+2026-07-18 Improvement - neoAi: Return remaining quota after successful free image generation
+2026-07-18 Improvement - neoAi: Retrieve quota in settings only after consent or click
+2026-07-17 Feature     - neoAi: Free neoAI access generally available
+2026-07-15 Improvement - neoAi: Limit generated alt texts to a maximum of 125 characters
+2026-07-14 Improvement - neoAi: Option to hide the notice popup in neoAlt only during bulk generation
+2026-07-14 Improvement - neoAi: Warn before bulk generation if quota may be insufficient
+2026-07-13 Improvement - neoRename: Show confirmation and quota error of the free neoAI provider
+2026-07-13 Improvement - neoRename: Delegate caption generation entirely to neoAI
+2026-07-13 Feature     - neoRename: Free neoAI requests
+2026-07-13 Feature     - neoAi: Free neoAI provider for alt text and title generation
+2026-07-13 Feature     - neoAi: Display quota of the free neoAI provider
+2026-07-10 Improvement - neoGlobal: Special handling of serialized PHP objects with C: in the database
+2026-07-10 Improvement - neoGlobal: Support for native MySQL JSON columns in the database
+2026-07-02 Improvement - neoRename: Uses global page builder warning for media changes
+2026-07-02 Improvement - neoGlobal: Media URL replacements on current post and postmeta content instead of revisions focused for performance
+2026-07-01 Improvement - neoGlobal: Robustness regarding neoWP update server for current plugin lists
+2026-06-30 Improvement - neoLog: Deduplicate certain log lines
+2026-06-30 Improvement - neoRename: More site context for AI generation of title and alt text
+2026-06-29 Feature     - neoAi: OpenAI selectable as AI provider
+2026-06-29 Feature     - neoAi: Anthropic selectable as AI provider
+2026-06-29 Feature     - neoAi: Google Gemini selectable as AI provider
+2026-06-29 Feature     - neoAi: xAI selectable as AI provider
+2026-06-29 Feature     - neoAi: Mistral selectable as AI provider
+2026-06-29 Feature     - neoAi: WordPress integration selectable as AI provider
+2026-06-29 Feature     - neoAi: Custom AI provider selectable as AI provider
+2026-06-17 Feature     - neoRename: AI suggestions for titles added in the neoRename dialog
+2026-06-17 Feature     - neoRename: AI suggestions for alt text added in the neoRename dialog
+2026-06-17 Feature     - neoAi: AI support for image captions and neoWP features added
+2026-06-17 Feature     - neoAi: Set language for title and alt text generation in settings
+2026-06-17 Feature     - neoAi: Cost overview for AI features
+2026-06-17 Feature     - neoAi: View last prompt
+2026-06-13 Improvement - neoSettings: neoWP settings page placed under "Settings" by default
+2026-06-11 Improvement - neoRename: Make bulk functions of neoRename easier to find with hint arrow
+2026-06-11 Improvement - neoRename: Additional safeguards against errors when starting database renaming
+2026-06-11 Improvement - neoGlobal: Safely lock the database during a renaming
+2026-06-05 Improvement - neoLog: Improved logs
+2026-06-04 Fix         - neoGlobal: Compatibility ensured with caching plugins such as WP Super Cache
+2026-06-04 Improvement - neoGlobal: Stay on the plugin page after installation instead of redirecting
+2026-05-26 Improvement - neowp: WordPress 7 compatibility ensured
+2026-05-26 Feature     - neoSettings: Toggle to link neoWP under Settings and hide the main menu item
+2026-05-26 Improvement - neoRename: Treat word separators " " and "-" specifically in titles and filenames
+2026-05-21 Fix         - neoRename: Replace URL-encoded media URLs when renaming
+2026-05-20 Fix         - neoGlobal: Cachebust works on localhost
+2026-04-12 Feature     - neoRename: Intro tutorial for neoRename
+2026-04-10 Feature     - neoReset: Button to reset tutorial notices
+2026-04-03 Improvement - neoReset: Clear dropdown for different plugin reset options
+2026-04-02 Improvement - neoSettings: Settings organized and grouped per plugin
+2026-04-02 Improvement - neoSettings: Improved accessibility of the settings page
+2026-03-22 Improvement - neoRename: In replace mode, show renames only after replace input
+2026-03-21 Improvement - neoFreemius: Contact on settings page consolidated into support link
+2026-03-21 Improvement - neoRename: When renaming multiple media, show confirmation dialog only from two images
+2026-03-21 Improvement - neoRename: Notice after completing a batch process
+2026-03-21 Improvement - neoRename: X button to clear the search field
+2026-03-21 Improvement - neoRename: Info tooltips explaining all rename actions
+2026-03-21 Improvement - neoRename: Larger preview image in the neoRename dialog
+2026-03-17 Release     - neoRename: Release of neoRename Full
+2026-03-04 Improvement - neoRename: MariaDB compatibility extended to MySQL on PHP 8.2.27
+2026-03-03 Feature     - neoImageCachebust: Update renamed images in Bricks, Elementor, Divi, Gutenberg and Classic Editor using cachebust.
+2026-02-25 Fix         - neoRename: Do not rename identically named media of different types unless they have no own post
+2026-01-30 Improvement - neowp: Improved application of browser-set font size
+2026-01-30 Improvement - neoGlobal: Secure log folder name derived from WP secret key
+2026-01-30 Feature     - neoRename: Access neoRename from the grid view of the classic WP media library as well
+2026-01-28 Improvement - neoLog: Consolidation of all logs into an additional log file
+2026-01-16 Fix         - neoGlobal: Fixed issue with setting cards intermittently not displaying
+2026-01-15 Improvement - neoGlobal: Switches that are on but disabled get a slight green tint
+2026-01-15 Fix         - neoRename: No loading spinner in dialog preview when media library is empty
+2026-01-15 Improvement - neoRename: Clearer assistant for removing subfolders
+2026-01-14 Fix         - neoGlobal: Improved robustness for PHP-protected folders due to php.ini open_basedir setting
+2026-01-02 Release     - neoRename: Release of neoRename Beta
+2026-01-01 Feature     - neoSettings: Settings page for neoWP
+2026-01-01 Feature     - neoReset: Implementation of neoReset
+2026-01-01 Feature     - neoFreemius: Freemius integration
+2026-01-01 Feature     - neoRename: Optimize SEO with descriptive image names
+2026-01-01 Feature     - neoRename: Reliable renaming of filename, title, and slug
+2026-01-01 Feature     - neoRename: Batch processing to change multiple filenames at once
+2026-01-01 Feature     - neoRename: Instant preview of changes between old and new names
+2026-01-01 Feature     - neoRename: Undo renames
+2026-01-01 Feature     - neoRename: Fast automatic update of image URLs across all posts
+2026-01-01 Feature     - neoRename: Support for all file formats, including videos and PDFs
+2026-01-01 Feature     - neoManagerWporg: Implementation of neoManager
+2023-03-12 Birthday    - neowp: Founding of neoWP
+2023-03-12 Birthday    - neoRename: Birthday of the neoRename idea

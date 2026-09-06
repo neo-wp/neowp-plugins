@@ -1,0 +1,22 @@
+{
+    "plugin_slug": "neo-animate",
+    "plugin_edition": "wporg",
+    "plugin_version": "26.8.31",
+    "plugin_name": "neo Animate",
+    "plugin_description": "Make an impression with animated line-path effects!",
+    "plugin_contributors": "neoplugins",
+    "plugin_timestamp": 1788190444.862561,
+    "plugin_date_string": "2026-08-31 17:34:04 (Europe/Berlin)",
+    "plugin_namespace_prefix": "NeoAnimate",
+    "plugin_min_php_ver": "8.0",
+    "plugin_min_wp_ver": "6.2",
+    "plugin_license": "GPLv2 or later",
+    "plugin_license_uri": "https://www.gnu.org/licenses/gpl-2.0.html",
+    "plugin_blocked_os_families": [
+        "Windows"
+    ],
+    "plugin_author": "neoWP",
+    "plugin_author_uri": "https://neo-wp.com",
+    "plugin_author_a_tag": "<a href=\"https://neo-wp.com\">neoWP</a>",
+    "plugin_author_profile": "neoplugins"
+}

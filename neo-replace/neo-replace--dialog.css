@@ -1,0 +1,118 @@
+body .neo-replace--dialog-swal { z-index: 2000001; }
+.neo-replace--dialog {
+    position: fixed; inset: 0; z-index: 200000; display: flex; align-items: center; justify-content: center; padding: 20px; font-size: 16px; overscroll-behavior: contain;
+    p { font-size: 1em; }
+    button { border: none; background: none; cursor: pointer; }
+    input[type=checkbox] { min-width: initial; min-height: initial; }
+
+    .neo-replace--dialog-backdrop { position: fixed; inset: 0; z-index: -1; background: rgba(0, 0, 0, .5); backdrop-filter: blur(5px); transition: backdrop-filter 2s; }
+    &:not(:has(.neo-replace--dialog-box:hover)) .neo-replace--dialog-backdrop { backdrop-filter: blur(0px); }
+    .neo-replace--dialog-drop-feedback { position: fixed; inset: 0; z-index: 3; display: none; align-items: center; justify-content: center; pointer-events: none; }
+    .neo-replace--dialog-drop-feedback { background: rgba(18, 72, 112, .8); color: #fff; font-weight: 700; text-shadow: 0 1px 3px rgba(0, 0, 0, .45); }
+    &.neo-replace--dialog-dragover .neo-replace--dialog-drop-feedback { display: flex; }
+
+    .neo-replace--dialog-box { position: relative; z-index: 1; width: min(980px, 100%); max-height: min(860px, calc(100vh - 40px)); display: flex; flex-direction: column; overflow: hidden; }
+    .neo-replace--dialog-box { --border-radius: 10px; border-radius: var(--border-radius); box-shadow: 0 0 10px rgba(0, 0, 0, .5); animation: neo-replace--dialog-box-scale 0.2s ease-out; animation-fill-mode: forwards; }
+    .neo-replace--dialog-file-section, .neo-replace--dialog-detail-section { position: relative; display: flex; flex-direction: column; --section-padding: 40px; padding: var(--section-padding); }
+    .neo-replace--dialog-file-section, .neo-replace--dialog-detail-section { box-shadow: 0 0 10px rgba(0, 0, 0, .1); border-radius: 0 0 var(--border-radius) var(--border-radius); }
+    .neo-replace--dialog-file-section { margin-bottom: calc(0px - var(--border-radius)); }
+    .neo-replace--dialog-file-section { z-index: 1; flex-shrink: 0; background: #ffffff; }
+    .neo-replace--dialog-detail-section { z-index: 0; flex: 1 1 auto; min-height: 0; background: #f7f7f7; }
+    :where(& .neo-replace--dialog-feedback-button, & .neo-replace--dialog-settings-button) { position: absolute; top: 0; z-index: 10; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; padding: 0; background: transparent; border: 0; user-select: none; cursor: pointer; }
+    .neo-replace--dialog-feedback-button { right: 60px; }
+    .neo-replace--dialog-settings-button { right: 30px; }
+    .neo-replace--dialog-feedback-button > button, .neo-replace--dialog-settings-button > a { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 0; background: transparent; border: 0; color: inherit; text-decoration: none; cursor: pointer; }
+    .neo-replace--dialog-feedback-button img, .neo-replace--dialog-settings-button img { width: 15px; height: 15px; opacity: 0.8; transform: translateY(-1px); }
+    .neo-replace--dialog-close-button { position: absolute; top: 0; right: 0; z-index: 10; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
+    .neo-replace--dialog-close-button { background-color: transparent; border: none; user-select: none; cursor: pointer; }
+    .neo-replace--dialog-close-button img { width: 20px; height: 20px; }
+    .neo-replace--dialog-feedback-button:hover img, .neo-replace--dialog-settings-button:hover img { transform: translateY(-1px) scale(1.1); }
+    .neo-replace--dialog-close-button:hover img { transform: scale(1.1); }
+
+    .neo-replace--dialog-file-heading-row { display: flex; gap: 20px; padding: 0 0 12px; font-size: 1.25em; font-weight: 700; color: #1d2327; }
+    .neo-replace--dialog-file-heading-row span { flex: 1 1 0; min-width: 0; text-align: center; }
+    .neo-replace--dialog-preview-row { display: flex; gap: 20px; background: #ffffff; }
+    :is(.neo-replace--dialog-preview, .neo-replace--dialog-dropzone) { flex: 1 1 0; min-width: 0; height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 20px; }
+    .neo-replace--dialog-preview, .neo-replace--dialog-dropzone { margin: 0; padding: 20px; border: 1px solid #d0d0d0; border-radius: 8px; background: #f7f7f7; text-align: center; box-sizing: border-box; }
+    .neo-replace--dialog-preview { color: inherit; }
+    .neo-replace--dialog-dropzone { cursor: pointer; }
+    &.neo-replace--dialog-dragover .neo-replace--dialog-dropzone, .neo-replace--dialog-dropzone:hover, .neo-replace--dialog-dropzone:focus-visible { border-color: var(--wp-admin-theme-color, #2271b1); background: #f0f6fc; }
+    .neo-replace--dialog-file-input { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+    .neo-replace--dialog-current-preview, .neo-replace--dialog-new-preview { display: contents; }
+    .neo-replace--dialog-dropzone .neo-replace--dialog-preview { flex: 1 1 auto; width: 100%; min-height: 0; padding: 0; border: 0; background: transparent; }
+    .neo-replace--dialog-preview-text { width: 100%; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .neo-replace--dialog-preview-label { font-weight: 600; color: #1d2327; }
+    .neo-replace--dialog-preview-row > .neo-replace--dialog-preview > .neo-replace--dialog-preview-text > .neo-replace--dialog-preview-label { display: none; }
+    .neo-replace--dialog-dropzone .neo-replace--dialog-preview:has(.neo-replace--dialog-preview-filename:not(:empty)) .neo-replace--dialog-preview-label { display: none; }
+    .neo-replace--dialog-preview-media { width: 100%; flex: 1 1 auto; min-height: 0; display: flex; align-items: flex-start; justify-content: center; }
+    .neo-replace--dialog-preview-media img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 0 10px #00000020; }
+    .neo-replace--dialog-preview-media img {
+        background: conic-gradient(#00000010 25%, transparent 0 50%, #00000010 0 75%, transparent 0) 0 0 / 20px 20px;
+    }
+    .neo-replace--dialog-preview-media img { background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0; }
+    .neo-replace--dialog-preview-icon { mask-repeat: no-repeat; mask-position: center; mask-size: 90px; background-image: linear-gradient(to right top, #ff00ff, #000000, #00ff00); }
+    .neo-replace--dialog-preview-icon[data-neo-replace--file-type="video"] { mask-image: url(./img/_global-file-type-video-icon.svg); }
+    .neo-replace--dialog-preview-icon[data-neo-replace--file-type="audio"] { mask-image: url(./img/_global-file-type-audio-icon.svg); }
+    .neo-replace--dialog-preview-icon[data-neo-replace--file-type="pdf"] { mask-image: url(./img/_global-file-type-pdf-icon.svg); }
+    .neo-replace--dialog-preview-icon[data-neo-replace--file-type="txt"] { mask-image: url(./img/_global-file-type-txt-icon.svg); }
+    .neo-replace--dialog-preview-icon[data-neo-replace--file-type="zip"] { mask-image: url(./img/_global-file-type-zip-icon.svg); }
+    .neo-replace--dialog-preview-icon[data-neo-replace--file-type="other"] { mask-image: url(./img/_global-file-type-file-icon.svg); }
+    .neo-replace--dialog-preview-filename { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; color: #1d2327; }
+    .neo-replace--dialog-preview-filename:empty { display: none; }
+    .neo-replace--dialog-preview-meta { min-height: 1.2em; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #606060; font-size: .9em; }
+    .neo-replace--dialog-preview-meta-text { min-height: 1.2em; }
+
+    .neo-replace--dialog-options { width: fit-content; max-width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+    .neo-replace--dialog-options label { display: flex; align-items: center; gap: 8px; }
+    .neo-replace--dialog-options input[type=checkbox] { margin: 0; }
+    .neo-replace--dialog-usage { min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+    .neo-replace--dialog-usage h3 { margin: 0 0 6px; font-size: 1em; }
+    .neo-replace--dialog-usage-list { min-height: 0; flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px; max-height: 150px; padding-bottom: 2px; overflow: auto; overscroll-behavior: contain; }
+    .neo-replace--dialog-usage-entry { display: block; min-width: 0; min-height: 1.25em; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .neo-replace--dialog-usage-list a { color: var(--wp-admin-theme-color, #2271b1); text-decoration: none; }
+    .neo-replace--dialog-usage-list a { width: fit-content; max-width: 100%; }
+    .neo-replace--dialog-usage-list a:hover { text-decoration: underline; }
+    .neo-replace--dialog-usage-note { color: #606060; }
+    .neo-replace--dialog-detail-section-pro-teaser { --section-padding: calc(20px + var(--border-radius)) 40px 20px; }
+    .neo-replace--dialog-usage-pro { display: flex; align-items: center; justify-content: center; gap: 16px; min-height: 38px; }
+    .neo-replace--dialog-usage-pro p { flex: 0 1 auto; min-width: 0; margin: 0; color: #606060; }
+    .neo-replace--dialog-usage-pro-action { flex: 0 0 auto; }
+
+    .neo-replace--dialog-actions { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; margin-top: 20px; }
+    .neo-replace--dialog-progressbar { display: none; width: 100%; height: 8px; margin: 0 auto; overflow: hidden; border-radius: 999px; background: #dcdcde; opacity: 0; transition: opacity .18s ease; }
+    .neo-replace--dialog-progressbar span { display: block; width: 100%; height: 100%; border-radius: 0; background: var(--wp-admin-theme-color, #2271b1); }
+    .neo-replace--dialog-progressbar span { transform: scaleX(var(--neo-replace--dialog-progress, 0)); transform-origin: left; transition: transform .15s linear; }
+    &:is(.neo-replace--progress) .neo-replace--dialog-progressbar { display: block; opacity: 1; }
+    &:is(.neo-replace--progress) .neo-replace--dialog-dropzone .neo-replace--dialog-preview-meta-text { display: none; }
+    &:is(.neo-replace--success) .neo-replace--dialog-progressbar { display: block; opacity: 1; }
+    &:is(.neo-replace--success) .neo-replace--dialog-dropzone .neo-replace--dialog-preview-meta-text { display: none; }
+    &:is(.neo-replace--success) .neo-replace--dialog-progressbar span { background: #00a32a; }
+    .neo-replace--dialog-replace-button { min-width: 130px; height: 42px; padding: 0 16px; border-radius: 4px; background: var(--wp-admin-theme-color, #2271b1); color: #fff; font-size: 1em; }
+    .neo-replace--dialog-replace-button:not(:disabled):hover { filter: brightness(110%); }
+    .neo-replace--dialog-replace-button:disabled:not(.neo-replace--loading, .neo-replace--done) { opacity: .7; filter: grayscale(100%); cursor: default; }
+    .neo-replace--dialog-replace-button:is(.neo-replace--loading, .neo-replace--done) { cursor: default; }
+    .neo-replace--dialog-replace-button.neo-replace--done { background: #00a32a; }
+    .neo-replace--spinner { display: none; width: 14px; height: 14px; border: 3px solid rgba(255, 255, 255, .35); border-top-color: #fff; border-radius: 50%; animation: neo-replace--dialog-button-spin 1s linear infinite; }
+    .neo-replace--loading .neo-replace--spinner { display: inline-block; }
+    .neo-replace--loading .neo-replace--dialog-replace-button-text { display: none; }
+
+    @media (max-width: 767px) { padding: 10px; }
+    @media (max-width: 767px) { .neo-replace--dialog-file-section, .neo-replace--dialog-detail-section { --section-padding: 20px; } }
+    @media (max-width: 767px) { .neo-replace--dialog-detail-section { display: none; } }
+    @media (max-width: 767px) { .neo-replace--dialog-file-heading-row { display: none; } }
+    @media (max-width: 767px) { .neo-replace--dialog-preview-row { flex-direction: column; gap: 8px; } }
+    @media (max-width: 767px) { .neo-replace--dialog-preview-row > .neo-replace--dialog-preview > .neo-replace--dialog-preview-text > .neo-replace--dialog-preview-label { display: block; } }
+    @media (max-width: 767px) { .neo-replace--dialog-dropzone .neo-replace--dialog-preview-label { display: block; } }
+    @media (max-width: 767px) { .neo-replace--dialog-preview, .neo-replace--dialog-dropzone { min-height: 200px; } }
+    @media (max-width: 767px) { .neo-replace--dialog-actions { flex-direction: column; margin-top: 20px; } }
+    @media (max-width: 767px) { .neo-replace--dialog-progressbar { width: 100%; } }
+}
+
+@keyframes neo-replace--dialog-button-spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes neo-replace--dialog-box-scale {
+    from { transform: scale(0.2); }
+    to { transform: scale(1.0); }
+}

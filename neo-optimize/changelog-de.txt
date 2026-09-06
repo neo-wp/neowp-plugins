@@ -1,0 +1,48 @@
+Vollständigen Changelog anzeigen: [https://neo-wp.com/changelog/?ref=wp-org#neo-optimize](https://neo-wp.com/changelog/?ref=wp-org#neo-optimize)
+
+2026-08-28 Improvement - neoOptimize: Verbesserte WebP/AVIF-Format-Erkennung auf Servern, die bestimmte Formate nicht unterstützen
+2026-08-14 Improvement - neoLog: Erweiterte Logs für Datenbank-Operationen
+2026-08-11 Improvement - neoManagerWporg: Direkte Installation aus dem WordPress Plugin Directory
+2026-08-05 Improvement - neoSettings: neoWP-Einstellungsseite unter "Werkzeuge" statt unter "Einstellungen" verlinkt
+2026-08-02 Feature     - neoFeedback: Feedback direkt aus neoPlugins senden
+2026-07-19 Fix         - neoFreemius: Update für einige Free-User wieder ermöglicht
+2026-07-18 Improvement - neoLog: Bessere Kompatibilität bzgl. Verschlüsselung durch libsodium
+2026-07-01 Improvement - neoGlobal: Robustheit bezüglich neoWP Update-Server für aktuelle Plugin-Listen
+2026-06-30 Improvement - neoLog: Deduplizieren bestimmter Log-Zeilen
+2026-06-30 Improvement - neoOptimize: Automatische Weiterleitung von AVIF- auf WebP-Format und umgekehrt beim Umstellen der Format-Einstellung
+2026-06-23 Fix         - neoOptimize: Problem mit Kombination Imagick <7.0.0, transparenten Bildern und AVIF behoben
+2026-06-22 Improvement - neoOptimize: Robustheit gegenüber bestehender falscher Metadaten-Einträge in WP
+2026-06-17 Fix         - neoOptimize: Problem in Kombination mit border-width-Style auf Bildern behoben
+2026-06-13 Improvement - neoSettings: neoWP-Einstellungsseite standardmäßig unter "Einstellungen" zu finden
+2026-06-05 Improvement - neoLog: Verbesserte Logs
+2026-06-04 Fix         - neoGlobal: Kompatibilität mit Caching Plugins wie z.B. WP Super Cache gewährleistet
+2026-06-04 Improvement - neoGlobal: Nach der Installation auf Plugin-Seite bleiben, anstatt weiterzuleiten
+2026-05-26 Improvement - neowp: WordPress 7 Kompatibilität gewährleistet
+2026-05-26 Feature     - neoSettings: Schalter, um neoWP unter Einstellungen zu verlinken und den großen Menüpunkt auszublenden
+2026-05-25 Feature     - neoOptimize: Maximiere das SEO-Ranking deiner Bilder
+2026-05-25 Feature     - neoOptimize: Originalbilder und Datenbank bleiben unberührt
+2026-05-25 Feature     - neoOptimize: Resizing auf dem eigenen Server
+2026-05-25 Feature     - neoOptimize: Kostenfreier WebP Support für ausgespielte Bilder
+2026-05-25 Feature     - neoOptimize: Optimierung von neoDraw SVG Grafiken
+2026-05-25 Feature     - neoOptimize: Bild-Skalierung anhand der Anzeigegröße im Frontend
+2026-05-20 Fix         - neoGlobal: Cachebust funktioniert auf localhost
+2026-05-12 Feature     - neoOptimize: Bildqualität und Retina-Faktor einstellbar
+2026-05-12 Feature     - neoOptimize: Vorschaubild der Einstellungen
+2026-05-12 Feature     - neoOptimize: Bilder mit dem modernen AVIF Format komprimieren
+2026-04-10 Feature     - neoReset: Button zum Zurücksetzen von Tutorial-Hinweisen
+2026-04-03 Improvement - neoReset: Übersichtliches Dropdown für verschiedene Optionen zum Zurücksetzen des Plugins
+2026-04-02 Improvement - neoSettings: Einstellungen pluginspezifisch organisiert und gruppiert
+2026-04-02 Improvement - neoSettings: Verbesserte Accessibility der Einstellungsseite
+2026-03-21 Improvement - neoFreemius: Kontaktaufnahme auf Einstellungsseite in Support-Link vereint
+2026-01-30 Improvement - neowp: Verbesserung der Umsetzung der in den Browsereinstellungen gesetzten Schriftgröße
+2026-01-30 Improvement - neoGlobal: Sicherer Log-Ordnername, der sich aus WP Secret Key ableitet
+2026-01-28 Improvement - neoLog: Zusammenfassung aller Logs in einer zusätzlichen Log-Datei
+2026-01-16 Fix         - neoGlobal: Problem mit sporadisch nicht angezeigten Einstellungs-Karten behoben
+2026-01-15 Improvement - neoGlobal: Angeschaltete, aber deaktivierte Schalter bekommen einen leichten Grünton
+2026-01-14 Fix         - neoGlobal: Robustheit gegenüber von PHP geschützter Ordner aufgrund der php.ini-Einstellung open_basedir
+2026-01-01 Feature     - neoSettings: Einstellungsseite für neoWP
+2026-01-01 Feature     - neoReset: Implementierung neoReset
+2026-01-01 Feature     - neoFreemius: Freemius-Integration
+2026-01-01 Feature     - neoManagerWporg: Implementierung neoManager
+2023-03-12 Birthday    - neowp: Gründung von neoWP
+2023-03-12 Birthday    - neoOptimize: Geburtstag der Idee von neoOptimize

@@ -1,0 +1,88 @@
+Show full changelog: [https://neo-wp.com/changelog/?ref=wp-org#neo-alt](https://neo-wp.com/changelog/?ref=wp-org#neo-alt)
+
+2026-08-31 Fix         - neoAlt: More conservative display of the save reminder
+2026-08-31 Feature     - neoAi: Title generation for PDF files
+2026-08-31 Feature     - neoAi: Title generation for text files
+2026-08-31 Feature     - neoAi: Title generation for videos
+2026-08-30 Feature     - neoAlt: Sort images by alt text length
+2026-08-30 Feature     - neoAlt: Exclude search terms prefixed with "-"
+2026-08-30 Feature     - neoAlt: Select images with checkboxes for bulk generation
+2026-08-28 Improvement - neoAi: Conserve server load better for page-context queries
+2026-08-17 Improvement - neoAlt: Support for more image file formats
+2026-08-17 Improvement - neoAlt: Support for larger image files
+2026-08-17 Improvement - neoAi: Faster alt-text generation by compressing before AI analysis
+2026-08-17 Improvement - neoGlobal: Safely show occurrences of images in the database to editors
+2026-08-14 Improvement - neoLog: Enhanced logs for database operations
+2026-08-12 Improvement - neoAlt: Continue bulk generation after successful single start with four parallel images
+2026-08-12 Improvement - neoAlt: Also show bulk save and discard buttons when scrolled down
+2026-08-12 Feature     - neoAlt: Reminder to save for unsaved changes
+2026-08-11 Improvement - neoManagerWporg: Direct installation from the WordPress Plugin Directory
+2026-08-10 Feature     - neoAi: Alt text and title generation for arbitrary SVG files possible
+2026-08-09 Fix         - neoGlobal: Improved database timeout logic for long searches
+2026-08-05 Improvement - neoSettings: Linked neoWP settings page under "Tools" instead of under "Settings"
+2026-08-02 Feature     - neoFeedback: Send feedback directly from neoPlugins
+2026-08-02 Improvement - neoAlt: Additional prompt possible for bulk generation
+2026-08-02 Improvement - neoAlt: Limit filter for empty alt texts to images
+2026-08-02 Improvement - neoAi: Consider temporary prompt addition for image text generations
+2026-08-02 Improvement - neoAi: Edit custom prompt instructions separately and test with any chosen media library image
+2026-08-02 Improvement - neoAi: Prompt addition possible for bulk generation
+2026-07-23 Feature     - neoAi: Add custom prompt instructions for titles and alt texts
+2026-07-22 Feature     - neoAlt: Generate AI alt texts directly in WordPress
+2026-07-20 Release     - neoAlt: Release of neoAlt Beta
+2026-07-20 Release     - neoAlt: Release of neoAlt Full
+2026-07-20 Improvement - neoAi: Highlight pro quota in the exhausted quota dialog
+2026-07-19 Fix         - neoFreemius: Re-enabled update for some free users
+2026-07-19 Improvement - neoAlt: Edit filenames via neoRename
+2026-07-18 Improvement - neoLog: Improved compatibility regarding encryption via libsodium
+2026-07-18 Improvement - neoAi: Return remaining quota after successful free image generation
+2026-07-18 Improvement - neoAi: Retrieve quota in settings only after consent or click
+2026-07-17 Feature     - neoAi: Free neoAI access generally available
+2026-07-15 Improvement - neoAlt: Simplify row and bulk flows using distinct operation states
+2026-07-15 Fix         - neoAlt: Lock row controls during page operations and stop bulk when consent is withdrawn
+2026-07-15 Fix         - neoAlt: Rebuild table rows completely from their internal field state after sorting
+2026-07-15 Improvement - neoAi: Limit generated alt texts to a maximum of 125 characters
+2026-07-14 Feature     - neoAlt: Edit media titles and alt texts
+2026-07-14 Feature     - neoAlt: Bulk-generate media titles and alt texts with neoAI
+2026-07-14 Feature     - neoAlt: Confirm or reject media titles and alt texts
+2026-07-14 Feature     - neoAlt: Filter images by search term
+2026-07-14 Feature     - neoAlt: Filter images to show only empty alt texts
+2026-07-14 Improvement - neoAlt: Bulk generation processes up to four images in parallel
+2026-07-14 Improvement - neoAi: Option to hide the info popup only during bulk generation in neoAlt
+2026-07-14 Improvement - neoAi: Warn before bulk generation about possibly insufficient quota
+2026-07-13 Feature     - neoAi: Free neoAI provider for alt text and title generation
+2026-07-13 Feature     - neoAi: Show quota of the free neoAI provider
+2026-07-01 Improvement - neoGlobal: Robustness regarding neoWP update server for current plugin lists
+2026-06-30 Improvement - neoLog: Deduplicate certain log lines
+2026-06-29 Feature     - neoAi: OpenAI selectable as AI provider
+2026-06-29 Feature     - neoAi: Anthropic selectable as AI provider
+2026-06-29 Feature     - neoAi: Google Gemini selectable as AI provider
+2026-06-29 Feature     - neoAi: xAI selectable as AI provider
+2026-06-29 Feature     - neoAi: Mistral selectable as AI provider
+2026-06-29 Feature     - neoAi: WordPress integration selectable as AI provider
+2026-06-29 Feature     - neoAi: Custom AI provider selectable as AI provider
+2026-06-17 Feature     - neoAi: AI support for image captions and neoWP features added
+2026-06-17 Feature     - neoAi: Set language for title and alt text generation in settings
+2026-06-17 Feature     - neoAi: Cost overview for AI features
+2026-06-17 Feature     - neoAi: View last prompt
+2026-06-13 Improvement - neoSettings: neoWP settings page found under "Settings" by default
+2026-06-05 Improvement - neoLog: Improved logs
+2026-06-04 Fix         - neoGlobal: Compatibility with caching plugins such as WP Super Cache ensured
+2026-06-04 Improvement - neoGlobal: Stay on the plugin page after installation instead of redirecting
+2026-05-26 Improvement - neowp: WordPress 7 compatibility ensured
+2026-05-26 Feature     - neoSettings: toggle to link neoWP under Settings and hide the main menu item
+2026-04-10 Feature     - neoReset: button to reset tutorial notices
+2026-04-03 Improvement - neoReset: clear dropdown for different plugin reset options
+2026-04-02 Improvement - neoSettings: settings organized and grouped per plugin
+2026-04-02 Improvement - neoSettings: improved accessibility of the settings page
+2026-03-21 Improvement - neoFreemius: Unified contact on settings page into support link
+2026-01-30 Improvement - neowp: improved handling of the browser-set font size
+2026-01-30 Improvement - neoGlobal: secure log folder name derived from WP Secret Key
+2026-01-28 Improvement - neoLog: summary of all logs in an additional log file
+2026-01-16 Fix         - neoGlobal: fixed issue with setting cards sometimes not showing
+2026-01-15 Improvement - neoGlobal: Switches that are turned on but disabled get a light green tint
+2026-01-14 Fix         - neoGlobal: Robustness against PHP-protected folders due to the php.ini open_basedir setting
+2026-01-01 Feature     - neoSettings: Settings page for neoWP
+2026-01-01 Feature     - neoReset: Implementation of neoReset
+2026-01-01 Feature     - neoFreemius: Freemius integration
+2026-01-01 Feature     - neoManagerWporg: Implementation of neoManager
+2023-03-12 Birthday    - neowp: Founding of neoWP

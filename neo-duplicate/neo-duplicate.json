@@ -1,0 +1,22 @@
+{
+    "plugin_slug": "neo-duplicate",
+    "plugin_edition": "wporg",
+    "plugin_version": "26.8.31",
+    "plugin_name": "neo Duplicate",
+    "plugin_description": "Duplicate images for SEO for page-specific ALT texts.",
+    "plugin_contributors": "neoplugins",
+    "plugin_timestamp": 1788189584.596131,
+    "plugin_date_string": "2026-08-31 17:19:44 (Europe/Berlin)",
+    "plugin_namespace_prefix": "NeoDuplicate",
+    "plugin_min_php_ver": "8.0",
+    "plugin_min_wp_ver": "6.2",
+    "plugin_license": "GPLv2 or later",
+    "plugin_license_uri": "https://www.gnu.org/licenses/gpl-2.0.html",
+    "plugin_blocked_os_families": [
+        "Windows"
+    ],
+    "plugin_author": "neoWP",
+    "plugin_author_uri": "https://neo-wp.com",
+    "plugin_author_a_tag": "<a href=\"https://neo-wp.com\">neoWP</a>",
+    "plugin_author_profile": "neoplugins"
+}

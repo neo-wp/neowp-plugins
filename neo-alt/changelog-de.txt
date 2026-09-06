@@ -1,0 +1,88 @@
+Vollständigen Changelog anzeigen: [https://neo-wp.com/changelog/?ref=wp-org#neo-alt](https://neo-wp.com/changelog/?ref=wp-org#neo-alt)
+
+2026-08-31 Fix         - neoAlt: Konservativere Anzeige der Speichern-Erinnerung
+2026-08-31 Feature     - neoAi: Titel-Generierung für PDF-Dateien
+2026-08-31 Feature     - neoAi: Titel-Generierung für Textdateien
+2026-08-31 Feature     - neoAi: Titel-Generierung für Videos
+2026-08-30 Feature     - neoAlt: Bilder nach Alt-Text-Länge sortieren
+2026-08-30 Feature     - neoAlt: Suchbegriffe mit vorangestelltem "-" ausschließen
+2026-08-30 Feature     - neoAlt: Bilder mit Checkboxen für die Bulk-Generierung auswählen
+2026-08-28 Improvement - neoAi: Bei Seitenkontext-Abfragen den Server besser schonen
+2026-08-17 Improvement - neoAlt: Support für mehr Bild-Dateiformate
+2026-08-17 Improvement - neoAlt: Support für größere Bilddateien
+2026-08-17 Improvement - neoAi: Schnellere Alt-Text-Generierung durch Komprimierung vor AI-Analyse
+2026-08-17 Improvement - neoGlobal: Vorkommnisse von Bildern in der Datenbank auch für Editoren sicher anzeigen
+2026-08-14 Improvement - neoLog: Erweiterte Logs für Datenbank-Operationen
+2026-08-12 Improvement - neoAlt: Bulk-Generierung nach erfolgreichem Einzelstart mit vier parallelen Bildern fortsetzen
+2026-08-12 Improvement - neoAlt: Bulk-Speichern- und Discard-Buttons auch anzeigen, wenn heruntergescrollt wurde
+2026-08-12 Feature     - neoAlt: Erinnerung an Speichern bei ungespeicherten Änderungen
+2026-08-11 Improvement - neoManagerWporg: Direkte Installation aus dem WordPress Plugin Directory
+2026-08-10 Feature     - neoAi: Alt-Text- und Titel-Generierung für beliebige SVG-Dateien möglich
+2026-08-09 Fix         - neoGlobal: Verbesserte Datenbank-Timeout-Logik bei langen Suchen
+2026-08-05 Improvement - neoSettings: neoWP-Einstellungsseite unter "Werkzeuge" statt unter "Einstellungen" verlinkt
+2026-08-02 Feature     - neoFeedback: Feedback direkt aus neoPlugins senden
+2026-08-02 Improvement - neoAlt: Prompt-Zusatz bei Bulk-Generierung möglich
+2026-08-02 Improvement - neoAlt: Filter für leere Alt-Texte auf Bilder beschränken
+2026-08-02 Improvement - neoAi: Temporären Prompt-Zusatz bei Bildtext-Generierungen berücksichtigen
+2026-08-02 Improvement - neoAi: Eigene Prompt-Anweisungen getrennt bearbeiten und mit frei gewähltem Mediathekbild testen
+2026-08-02 Improvement - neoAi: Prompt-Zusatz bei Bulk-Generierung möglich
+2026-07-23 Feature     - neoAi: Eigene Prompt-Anweisungen für Titel und Alt-Texte hinzufügen
+2026-07-22 Feature     - neoAlt: AI-Alt-Texte direkt in WordPress generieren
+2026-07-20 Release     - neoAlt: Release von neoAlt Beta
+2026-07-20 Release     - neoAlt: Release von neoAlt Full
+2026-07-20 Improvement - neoAi: Pro-Kontingent im ausgeschöpften Kontingentdialog hervorheben
+2026-07-19 Fix         - neoFreemius: Update für einige Free-User wieder ermöglicht
+2026-07-19 Improvement - neoAlt: Dateinamen über neoRename bearbeiten
+2026-07-18 Improvement - neoLog: Bessere Kompatibilität bzgl. Verschlüsselung durch libsodium
+2026-07-18 Improvement - neoAi: Restkontingent nach erfolgreicher kostenfreier Bildgenerierung zurückgeben
+2026-07-18 Improvement - neoAi: Kontingent in den Einstellungen erst nach Zustimmung oder Klick abrufen
+2026-07-17 Feature     - neoAi: Kostenfreier neoAI Zugang allgemein verfügbar
+2026-07-15 Improvement - neoAlt: Row- und Bulk-Abläufe über eindeutige Operations-States vereinfachen
+2026-07-15 Fix         - neoAlt: Row-Controls während Page-Operationen sperren und Bulk beim Consent-Abbruch beenden
+2026-07-15 Fix         - neoAlt: Tabellen-Rows nach Sortierung vollständig aus ihrem internen Feld-State neu aufbauen
+2026-07-15 Improvement - neoAi: Generierte Alt-Texte auf maximal 125 Zeichen begrenzen
+2026-07-14 Feature     - neoAlt: Medientitel und Alt-Texte bearbeiten
+2026-07-14 Feature     - neoAlt: Medientitel und Alt-Texte bulk-generieren mit neoAI
+2026-07-14 Feature     - neoAlt: Medientitel und Alt-Texte bestätigen oder verwerfen
+2026-07-14 Feature     - neoAlt: Bilder nach Suchbegriff filtern
+2026-07-14 Feature     - neoAlt: Bilder filtern, um nur leere Alt-Texte anzuzeigen
+2026-07-14 Improvement - neoAlt: Bulk-Generierung verarbeitet bis zu vier Bilder parallel
+2026-07-14 Improvement - neoAi: Option, das Hinweis-Popup nur während des Bulk-Generierens in neoAlt auszublenden
+2026-07-14 Improvement - neoAi: Vor Bulk-Generierung vor ggf. unzureichendem Kontingent warnen
+2026-07-13 Feature     - neoAi: Kostenfreier neoAI Provider für Alt-Text- und Titel-Generierung
+2026-07-13 Feature     - neoAi: Kontingent des kostenfreien neoAI-Providers anzeigen
+2026-07-01 Improvement - neoGlobal: Robustheit bezüglich neoWP Update-Server für aktuelle Plugin-Listen
+2026-06-30 Improvement - neoLog: Deduplizieren bestimmter Log-Zeilen
+2026-06-29 Feature     - neoAi: OpenAI als AI-Provider auswählbar
+2026-06-29 Feature     - neoAi: Anthropic als AI-Provider auswählbar
+2026-06-29 Feature     - neoAi: Google Gemini als AI-Provider auswählbar
+2026-06-29 Feature     - neoAi: xAI als AI-Provider auswählbar
+2026-06-29 Feature     - neoAi: Mistral als AI-Provider auswählbar
+2026-06-29 Feature     - neoAi: WordPress-Integration als AI-Provider auswählbar
+2026-06-29 Feature     - neoAi: Custom AI-Provider als AI-Provider auswählbar
+2026-06-17 Feature     - neoAi: AI-Unterstützung für Bildtexte und neoWP-Features hinzugefügt
+2026-06-17 Feature     - neoAi: Sprache für Titel- und Alt-Text-Generierung in Einstellungen festlegen
+2026-06-17 Feature     - neoAi: Kostenübersicht für AI-Features
+2026-06-17 Feature     - neoAi: Letzten Prompt einsehen
+2026-06-13 Improvement - neoSettings: neoWP-Einstellungsseite standardmäßig unter "Einstellungen" zu finden
+2026-06-05 Improvement - neoLog: Verbesserte Logs
+2026-06-04 Fix         - neoGlobal: Kompatibilität mit Caching Plugins wie z.B. WP Super Cache gewährleistet
+2026-06-04 Improvement - neoGlobal: Nach der Installation auf Plugin-Seite bleiben, anstatt weiterzuleiten
+2026-05-26 Improvement - neowp: WordPress 7 Kompatibilität gewährleistet
+2026-05-26 Feature     - neoSettings: Schalter, um neoWP unter Einstellungen zu verlinken und den großen Menüpunkt auszublenden
+2026-04-10 Feature     - neoReset: Button zum Zurücksetzen von Tutorial-Hinweisen
+2026-04-03 Improvement - neoReset: Übersichtliches Dropdown für verschiedene Optionen zum Zurücksetzen des Plugins
+2026-04-02 Improvement - neoSettings: Einstellungen pluginspezifisch organisiert und gruppiert
+2026-04-02 Improvement - neoSettings: Verbesserte Accessibility der Einstellungsseite
+2026-03-21 Improvement - neoFreemius: Kontaktaufnahme auf Einstellungsseite in Support-Link vereint
+2026-01-30 Improvement - neowp: Verbesserung der Umsetzung der in den Browsereinstellungen gesetzten Schriftgröße
+2026-01-30 Improvement - neoGlobal: Sicherer Log-Ordnername, der sich aus WP Secret Key ableitet
+2026-01-28 Improvement - neoLog: Zusammenfassung aller Logs in einer zusätzlichen Log-Datei
+2026-01-16 Fix         - neoGlobal: Problem mit sporadisch nicht angezeigten Einstellungs-Karten behoben
+2026-01-15 Improvement - neoGlobal: Angeschaltete, aber deaktivierte Schalter bekommen einen leichten Grünton
+2026-01-14 Fix         - neoGlobal: Robustheit gegenüber von PHP geschützter Ordner aufgrund der php.ini-Einstellung open_basedir
+2026-01-01 Feature     - neoSettings: Einstellungsseite für neoWP
+2026-01-01 Feature     - neoReset: Implementierung neoReset
+2026-01-01 Feature     - neoFreemius: Freemius-Integration
+2026-01-01 Feature     - neoManagerWporg: Implementierung neoManager
+2023-03-12 Birthday    - neowp: Gründung von neoWP
