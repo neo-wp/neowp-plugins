@@ -1,0 +1,39 @@
+Show full changelog: [https://neo-wp.com/changelog/?ref=wp-org#neo-duplicate](https://neo-wp.com/changelog/?ref=wp-org#neo-duplicate)
+
+2026-08-18 Fix         - neoDuplicate: Assign numeric filename suffixes sequentially when duplicating repeatedly
+2026-08-17 Fix         - neoDuplicate: Improved naming of parallel duplicates
+2026-08-14 Improvement - neoLog: Enhanced logs for database operations
+2026-08-14 Improvement - neoDuplicate: Consider WordPress 7.1 source files and animated GIF companion files
+2026-08-11 Improvement - neoManagerWporg: Direct installation from the WordPress Plugin Directory
+2026-08-05 Improvement - neoSettings: Linked neoWP settings page under "Tools" instead of under "Settings"
+2026-08-02 Feature     - neoFeedback: Send feedback directly from neoPlugins
+2026-07-19 Fix         - neoFreemius: Update re-enabled for some free users
+2026-07-18 Improvement - neoLog: Better compatibility regarding encryption by libsodium
+2026-07-01 Improvement - neoGlobal: Robustness regarding neoWP update server for current plugin lists
+2026-06-30 Improvement - neoLog: Deduplicate certain log lines
+2026-06-13 Improvement - neoSettings: neoWP settings page found under "Settings" by default
+2026-06-05 Improvement - neoLog: Improved logs
+2026-06-04 Fix         - neoGlobal: Compatibility with caching plugins such as WP Super Cache ensured
+2026-06-04 Improvement - neoGlobal: After installation, stay on the plugin page instead of redirecting
+2026-06-04 Feature     - neoDuplicate: setting for upload date of duplicated media
+2026-06-04 Feature     - neoDuplicate: integration into WP media library in grid view
+2026-06-04 Feature     - neoDuplicate: bulk mode for duplicating images
+2026-05-26 Improvement - neowp: WordPress 7 compatibility ensured
+2026-05-26 Feature     - neoSettings: Toggle to link neoWP under Settings and hide the main menu item
+2026-04-10 Feature     - neoReset: Button to reset tutorial notices
+2026-04-03 Improvement - neoReset: Clear dropdown for various plugin reset options
+2026-04-02 Improvement - neoSettings: Settings organized and grouped by plugin
+2026-04-02 Improvement - neoSettings: Improved accessibility of the settings page
+2026-03-21 Improvement - neoFreemius: Contact option on settings page combined into support link
+2026-01-30 Improvement - neowp: Improved enforcement of browser-set font size
+2026-01-30 Improvement - neoGlobal: Secure log folder name derived from WP secret key
+2026-01-28 Improvement - neoLog: Consolidation of all logs into an additional log file
+2026-01-16 Fix         - neoGlobal: Fixed issue with sporadically hidden settings cards
+2026-01-15 Improvement - neoGlobal: Enabled but switched-off toggles get a subtle green tint
+2026-01-14 Fix         - neoGlobal: Robustness against PHP-protected folders due to php.ini open_basedir setting
+2026-01-01 Feature     - neoSettings: Settings page for neoWP
+2026-01-01 Feature     - neoReset: Implementation of neoReset
+2026-01-01 Feature     - neoFreemius: Freemius integration
+2026-01-01 Feature     - neoManagerWporg: Implementation of neoManager
+2023-03-12 Birthday    - neowp: Founding of neoWP
+2023-03-12 Birthday    - neoDuplicate: Birth of the idea for neoDuplicate

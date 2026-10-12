@@ -1,0 +1,22 @@
+{
+    "plugin_slug": "neo-alt",
+    "plugin_edition": "wporg",
+    "plugin_version": "26.10.10",
+    "plugin_name": "neo Alt",
+    "plugin_description": "Create alt text and image titles directly in WordPress with AI - 300 free image alt text generations included every month!",
+    "plugin_contributors": "neoplugins",
+    "plugin_timestamp": 1791663187.773839,
+    "plugin_date_string": "2026-10-10 22:13:07 (Europe/Berlin)",
+    "plugin_namespace_prefix": "NeoAlt",
+    "plugin_min_php_ver": "8.0",
+    "plugin_min_wp_ver": "6.2",
+    "plugin_license": "GPLv2 or later",
+    "plugin_license_uri": "https://www.gnu.org/licenses/gpl-2.0.html",
+    "plugin_blocked_os_families": [
+        "Windows"
+    ],
+    "plugin_author": "neoWP",
+    "plugin_author_uri": "https://neo-wp.com",
+    "plugin_author_a_tag": "<a href=\"https://neo-wp.com\">neoWP</a>",
+    "plugin_author_profile": "neoplugins"
+}
