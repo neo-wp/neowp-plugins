@@ -1,0 +1,6 @@
+.bricks-add-element[data-element-name="image"]>.element-data>.element-label::before {
+    content: "+ neoDraw";
+    position: absolute; bottom: -4px; left: 0; right: 0; margin: 0 auto;
+    font-size: 9px; color: gray;
+}
+.bricks-add-element[data-element-name="image"]>.element-data>.element-label { height: 32px; line-height: 24px; }

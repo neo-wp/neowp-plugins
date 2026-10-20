@@ -1,0 +1,51 @@
+.elementor-panel-category-items .eicon-e-image::after {
+    content: "+ neoDraw";
+    font-family: Roboto, Arial, Helvetica, Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: gray;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: calc(100% - 12px);
+    max-height: 12px;
+    overflow: hidden;
+}
+
+.elementor-navigator__item .eicon-e-image::after {
+    display: none;
+}
+
+.neo-draw--atomic-image-control__description {
+    cursor: default;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.neo-draw--atomic-image-control:hover .neo-draw--atomic-image-control__description {
+    opacity: 0.67;
+}
+
+.neo-draw--atomic-image-control__card {
+    background-color: #FFFFFFA0;
+    background-image: linear-gradient(45deg, #BBBBBB 25%, transparent 25%), linear-gradient(-45deg, #BBBBBB 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #BBBBBB 75%), linear-gradient(-45deg, transparent 75%, #BBBBBB 75%);
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-size: 20px 20px;
+}
+
+.neo-draw--atomic-image-control__card .MuiCardMedia-root {
+    height: 178px !important;
+}
+
+.neo-draw--atomic-image-control__neodraw-button {
+    background-color: #000000 !important;
+    background-image: url(./img/neo-draw--edit-icon.svg) !important;
+    background-position: 6px center !important;
+    background-repeat: no-repeat !important;
+    background-size: 18px !important;
+    padding-left: 30px !important;
+}
+
+.neo-draw--atomic-image-control__neodraw-button:hover {
+    background-color: #303030 !important;
+}

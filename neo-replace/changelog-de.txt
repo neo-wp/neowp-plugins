@@ -1,0 +1,59 @@
+Vollständigen Changelog anzeigen: [https://neo-wp.com/changelog/?ref=wp-org#neo-replace](https://neo-wp.com/changelog/?ref=wp-org#neo-replace)
+
+2026-08-25 Improvement - neoReplace: Warnung für Pagebuilder nur noch, wenn Pagebuilder offen ist
+2026-08-17 Improvement - neoGlobal: Vorkommnisse von Bildern in der Datenbank auch für Editoren sicher anzeigen
+2026-08-14 Improvement - neoLog: Erweiterte Logs für Datenbank-Operationen
+2026-08-14 Fix         - neoReplace: WordPress-7.1-Begleitdateien beim Ersetzen berücksichtigen
+2026-08-14 Improvement - neoReplace: Unterstützung für HEIC-Uploads in WordPress 7.1
+2026-08-11 Improvement - neoManagerWporg: Direkte Installation aus dem WordPress Plugin Directory
+2026-08-09 Improvement - neoGlobal: Korrekte Behandlung vom MySQL Fehler 1020 bei großen Datenbank-Updates
+2026-08-09 Fix         - neoGlobal: Verbesserte Datenbank-Timeout-Logik bei langen Suchen
+2026-08-05 Improvement - neoSettings: neoWP-Einstellungsseite unter "Werkzeuge" statt unter "Einstellungen" verlinkt
+2026-08-02 Feature     - neoFeedback: Feedback direkt aus neoPlugins senden
+2026-07-29 Fix         - neoGlobal: Unterstützung für große URL-Ersetzungen bei kleiner Thread-Stack-Konfiguration der Datenbank
+2026-07-25 Improvement - neoReplace: 301-Weiterleitungen für Ersetzungen, die den Dateinamen ändern
+2026-07-19 Fix         - neoFreemius: Update für einige Free-User wieder ermöglicht
+2026-07-18 Improvement - neoLog: Bessere Kompatibilität bzgl. Verschlüsselung durch libsodium
+2026-07-10 Improvement - neoGlobal: Sonderbehandlung von serialisierten PHP-Objekten mit C: in der Datenbank
+2026-07-10 Improvement - neoGlobal: Unterstützung für native MySQL JSON-Spalten in der Datenbank
+2026-07-09 Improvement - neoReplace: Bereinigten Upload-Titel aus neoReplace-Dialog übernehmen
+2026-07-09 Improvement - neoReplace: Dateinamen und Titel werden beim Replace bereinigt
+2026-07-02 Improvement - neoGlobal: Medien-URL-Ersetzungen auf aktuelle Post- und Postmeta-Inhalte statt Revisions fokussiert für Performance
+2026-07-02 Improvement - neoReplace: Warnt vor offenen Pagebuildern vor dem Ersetzen
+2026-07-02 Fix         - neoGlobal: Still show detailed usage page with hundreds of entries
+2026-07-01 Improvement - neoGlobal: Robustheit bezüglich neoWP Update-Server für aktuelle Plugin-Listen
+2026-07-01 Improvement - neoReplace: Improved secure path validation and logging
+2026-06-30 Improvement - neoLog: Deduplizieren bestimmter Log-Zeilen
+2026-06-13 Improvement - neoSettings: neoWP-Einstellungsseite standardmäßig unter "Einstellungen" zu finden
+2026-06-11 Improvement - neoGlobal: Sicheres Sperren der Datenbank während einer Umbenennung
+2026-06-05 Improvement - neoLog: Verbesserte Logs
+2026-06-04 Fix         - neoGlobal: Kompatibilität mit Caching Plugins wie z.B. WP Super Cache gewährleistet
+2026-06-04 Improvement - neoGlobal: Nach der Installation auf Plugin-Seite bleiben, anstatt weiterzuleiten
+2026-05-26 Improvement - neowp: WordPress 7 Kompatibilität gewährleistet
+2026-05-26 Feature     - neoSettings: Schalter, um neoWP unter Einstellungen zu verlinken und den großen Menüpunkt auszublenden
+2026-05-25 Feature     - neoReplace: Ersetzt das Bild und behält Referenzen bei
+2026-05-25 Feature     - neoReplace: Einfaches Ersetzen der Dateien per Drag-and-Drop
+2026-05-25 Feature     - neoReplace: Unterstützt Bilder, Videos, Audio Dateien und PDF Dokumente
+2026-05-25 Feature     - neoReplace: Direkte Integration in die Mediathek
+2026-05-25 Feature     - neoReplace: Automatisches Regenerieren der Thumbnails
+2026-05-25 Feature     - neoReplace: Erhält Beschreibung, Beschriftungstext und Alt-Text
+2026-05-25 Feature     - neoReplace: Ersetzt zuverlässig auf der ganzen Webseite
+2026-05-20 Fix         - neoGlobal: Cachebust funktioniert auf localhost
+2026-04-10 Feature     - neoReset: Button zum Zurücksetzen von Tutorial-Hinweisen
+2026-04-03 Improvement - neoReset: Übersichtliches Dropdown für verschiedene Optionen zum Zurücksetzen des Plugins
+2026-04-02 Improvement - neoSettings: Einstellungen pluginspezifisch organisiert und gruppiert
+2026-04-02 Improvement - neoSettings: Verbesserte Accessibility der Einstellungsseite
+2026-03-21 Improvement - neoFreemius: Kontaktaufnahme auf Einstellungsseite in Support-Link vereint
+2026-03-03 Feature     - neoImageCachebust: Aktualisieren umbenannter Bilder in Bricks, Elementor, Divi, Gutenberg und Classic Editor mittels Cachebust.
+2026-01-30 Improvement - neowp: Verbesserung der Umsetzung der in den Browsereinstellungen gesetzten Schriftgröße
+2026-01-30 Improvement - neoGlobal: Sicherer Log-Ordnername, der sich aus WP Secret Key ableitet
+2026-01-28 Improvement - neoLog: Zusammenfassung aller Logs in einer zusätzlichen Log-Datei
+2026-01-16 Fix         - neoGlobal: Problem mit sporadisch nicht angezeigten Einstellungs-Karten behoben
+2026-01-15 Improvement - neoGlobal: Angeschaltete, aber deaktivierte Schalter bekommen einen leichten Grünton
+2026-01-14 Fix         - neoGlobal: Robustheit gegenüber von PHP geschützter Ordner aufgrund der php.ini-Einstellung open_basedir
+2026-01-01 Feature     - neoSettings: Einstellungsseite für neoWP
+2026-01-01 Feature     - neoReset: Implementierung neoReset
+2026-01-01 Feature     - neoFreemius: Freemius-Integration
+2026-01-01 Feature     - neoManagerWporg: Implementierung neoManager
+2023-03-12 Birthday    - neowp: Gründung von neoWP
+2023-03-12 Birthday    - neoReplace: Geburtstag der Idee von neoReplace
