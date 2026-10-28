@@ -1,0 +1,22 @@
+.neo-draw--img-editable { position: relative; }
+.neo-draw--img-editable .neo-draw--create-button,
+.neo-draw--img-editable .neo-draw--edit-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.neo-draw--img-editable       .neo-draw--edit-button { opacity: 0; }
+.neo-draw--img-editable:hover .neo-draw--edit-button { opacity: 1; }
+
+.neo-draw--img-editable .neo-draw--edit-button { position: absolute; top: calc(0% + 10px); left: calc(100% - 10px); transform: translate(-100%, 0%); }
+
+.neo-draw--img-editable.neo-draw--placeholder-image img { filter: grayscale(100%); opacity: 0.2; }
+
+.neo-draw--checkerboard-background:not(.neo-draw--placeholder-image):hover img {
+    --size: 20px;
+    --color: #00000010; --color-light: #ffffff10;
+    background-color: var(--color); background-size: var(--size) var(--size); background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2);
+    animation: neo-draw--keyframes-checkerboard-background-move 4s linear infinite;
+    background-image: linear-gradient( 45deg, var(--color) 25%, var(--color-light) 0%, var(--color-light) 75%, var(--color) 0%, var(--color)), linear-gradient( 45deg, var(--color) 25%, var(--color-light) 0%, var(--color-light) 75%, var(--color) 0%, var(--color));
+}
+@keyframes neo-draw--keyframes-checkerboard-background-move {
+    0% { background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2); }
+    100% { background-position: calc(var(--size) * -1) 0, calc(var(--size) / 2 + var(--size) * -1) calc(var(--size) / 2); }
+}

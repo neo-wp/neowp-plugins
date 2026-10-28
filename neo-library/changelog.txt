@@ -1,0 +1,46 @@
+Show full changelog: [https://neo-wp.com/changelog/?ref=wp-org#neo-library](https://neo-wp.com/changelog/?ref=wp-org#neo-library)
+
+2026-10-26 Improvement - neoFreemius: Update of the Freemius library
+2026-10-20 Improvement - neoGlobal: Security improvement for internal URL path function
+2026-08-17 Improvement - neoGlobal: Safely display occurrences of images in the database for editors as well
+2026-08-14 Improvement - neoLog: Expanded logs for database operations
+2026-08-14 Fix         - neoLibrary: Support for HEIC uploads
+2026-08-11 Improvement - neoManagerWporg: Direct installation from the WordPress Plugin Directory
+2026-08-09 Fix         - neoGlobal: Improved database timeout logic for long searches
+2026-08-06 Improvement - neoLibrary: Open neoDraw image in a new tab with Ctrl/Cmd-click
+2026-08-05 Improvement - neoSettings: Linked neoWP settings page under "Tools" instead of under "Settings"
+2026-08-02 Feature     - neoFeedback: Send feedback directly from neoPlugins
+2026-07-19 Fix         - neoFreemius: Update for some free users re-enabled
+2026-07-18 Improvement - neoLog: Better compatibility regarding encryption via libsodium
+2026-07-09 Improvement - neoLibrary: Filename is sanitized on upload
+2026-07-09 Improvement - neoLibrary: Title is sanitized on upload
+2026-07-09 Improvement - neoLibrary: Error texts in red for more attention
+2026-07-02 Fix         - neoGlobal: Still show detailed usage page with hundreds of entries
+2026-07-01 Improvement - neoGlobal: Robustness regarding neoWP update server for current plugin lists
+2026-07-01 Fix         - neoLibrary: Upload via file dialog
+2026-06-30 Improvement - neoLog: Deduplicate certain log lines
+2026-06-23 Fix         - neoLibrary: Fixed error message that appears in WP for incorrect metadata (0px images)
+2026-06-13 Improvement - neoSettings: neoWP settings page located under "Settings" by default
+2026-06-13 Improvement - neoLibrary: New icons when uploading and processing images
+2026-06-05 Improvement - neoLog: Improved logs
+2026-06-04 Fix         - neoGlobal: Compatibility with caching plugins such as WP Super Cache guaranteed
+2026-06-04 Improvement - neoGlobal: Stay on the plugin page after installation instead of redirecting
+2026-05-26 Improvement - neowp: WordPress 7 compatibility ensured
+2026-05-26 Feature     - neoSettings: Switch to link neoWP under Settings and hide the large menu item
+2026-04-10 Feature     - neoReset: Button to reset tutorial hints
+2026-04-03 Improvement - neoReset: Clear dropdown for different plugin reset options
+2026-04-02 Improvement - neoSettings: Settings organized and grouped per plugin
+2026-04-02 Improvement - neoSettings: Improved accessibility of the settings page
+2026-03-21 Improvement - neoFreemius: Contact on settings page consolidated into support link
+2026-01-30 Improvement - neowp: Improved handling of font size set in browser settings
+2026-01-30 Improvement - neoGlobal: Secure log folder name derived from WP Secret Key
+2026-01-28 Improvement - neoLog: Consolidation of all logs into an additional log file
+2026-01-16 Fix         - neoGlobal: Fixed issue with settings cards sometimes not displaying
+2026-01-15 Improvement - neoGlobal: Enabled but inactive switches get a slight green tint
+2026-01-14 Fix         - neoGlobal: Robustness against PHP-protected folders due to php.ini open_basedir setting
+2026-01-01 Feature     - neoSettings: Settings page for neoWP
+2026-01-01 Feature     - neoReset: Implementation of neoReset
+2026-01-01 Feature     - neoFreemius: Freemius integration
+2026-01-01 Feature     - neoManagerWporg: Implementation of neoManager
+2023-03-12 Birthday    - neowp: Founding of neoWP
+2023-03-12 Birthday    - neoLibrary: Birthday of the neoLibrary idea

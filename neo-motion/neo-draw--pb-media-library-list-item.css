@@ -1,0 +1,64 @@
+.neo-draw--media-row .neo-draw--img-editable .neo-draw--edit-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    --neo-draw--edit-button-size: 24px;
+    height: var(--neo-draw--edit-button-size);
+    width: var(--neo-draw--edit-button-size);
+    left: auto;
+    bottom: auto;
+    min-height: auto;
+    border: #c0c0c0 solid 1px;
+    background-image: url(./img/neo-draw--edit-icon.svg);
+    background-size: 66%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.neo-draw--media-row .neo-draw--img-editable .neo-draw--edit-button {
+    opacity: 0;
+}
+.neo-draw--media-row:hover .neo-draw--img-editable .neo-draw--edit-button {
+    opacity: 1;
+}
+
+.neo-draw--media-row .neo-draw--img-editable .neo-draw--edit-button {
+    background-color: #f0f0f0;
+    transform: scale(100%);
+    transform-origin: top right;
+    transition: transform 0.05s ease-in-out, background-color 0.05s ease-in-out;
+}
+.neo-draw--media-row .neo-draw--img-editable:hover .neo-draw--edit-button {
+    background-color: #ffffff;
+    transform: scale(110%);
+}
+
+.neo-draw--media-row .neo-draw--img-editable .neo-draw--edit-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: calc(-62px + var(--neo-draw--edit-button-size));
+    left: calc(-62px + var(--neo-draw--edit-button-size));
+}
+.neo-draw--media-row .neo-draw--img-editable {
+    overflow: hidden;
+}
+
+.neo-draw--media-row:not(.neo-draw--media-insertable) img {
+    border: none;
+}
+
+.neo-draw--media-row.neo-draw--media-insertable
+    .neo-draw--img-editable
+    .neo-draw--edit-button {
+    background-image: url(./img/neo-draw--insert-icon.svg);
+}
+
+.neo-draw--media-row .neo-draw--media-title-logo {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.1em;
+    vertical-align: baseline;
+}

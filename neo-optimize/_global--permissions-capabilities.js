@@ -1,0 +1,37 @@
+import { jsVar } from "./_global--enqueue-loader.js"
+
+export function currentUserCanGlobalEndpointRefreshNonce()       { return jsVar("currentUserCanGlobalEndpointRefreshNonce"); }
+export function currentUserCanGlobalOptions()                    { return jsVar("currentUserCanGlobalOptions"); }
+export function currentUserCanGlobalDbEntriesUsage()             { return jsVar("currentUserCanGlobalDbEntriesUsage"); }
+export function currentUserCanGlobalDbEntriesDetails()           { return jsVar("currentUserCanGlobalDbEntriesDetails"); }
+export function currentUserCanNeoConsoleGreeting()               { return jsVar("currentUserCanNeoConsoleGreeting"); }
+export function currentUserCanNeoDebug()                         { return jsVar("currentUserCanNeoDebug"); }
+export function currentUserCanNeoDemoContentImport()             { return jsVar("currentUserCanNeoDemoContentImport"); }
+export function currentUserCanNeoDomainSettingsUpdate()          { return jsVar("currentUserCanNeoDomainSettingsUpdate"); }
+export function currentUserCanNeoDraw()                          { return jsVar("currentUserCanNeoDraw"); }
+export function currentUserCanNeoDuplicate()                     { return jsVar("currentUserCanNeoDuplicate"); }
+export function currentUserCanNeoAnimate()                       { return jsVar("currentUserCanNeoAnimate"); }
+export function currentUserCanNeoFreemiusDeleteLicenseData()     { return jsVar("currentUserCanNeoFreemiusDeleteLicenseData"); }
+export function currentUserCanNeoFreemiusInstaller()             { return jsVar("currentUserCanNeoFreemiusInstaller"); }
+export function currentUserCanNeoGptEngineChangeReasons()        { return jsVar("currentUserCanNeoGptEngineChangeReasons"); }
+export function currentUserCanNeoLibraryView()                   { return jsVar("currentUserCanNeoLibraryView"); }
+export function currentUserCanNeoLibraryEdit()                   { return jsVar("currentUserCanNeoLibraryEdit"); }
+export function currentUserCanNeoManagerInstaller()              { return jsVar("currentUserCanNeoManagerInstaller"); }
+export function currentUserCanNeoManagerWporg()                  { return jsVar("currentUserCanNeoManagerWporg"); }
+export function currentUserCanNeoAlt()                           { return jsVar("currentUserCanNeoAlt"); }
+export function currentUserCanNeoAi()                            { return jsVar("currentUserCanNeoAi"); }
+export function currentUserCanNeoPluginsUninstall()              { return jsVar("currentUserCanNeoPluginsUninstall"); }
+export function currentUserCanNeoProDeleteLicenseServerMessage() { return jsVar("currentUserCanNeoProDeleteLicenseServerMessage"); }
+export function currentUserCanNeoProInstaller()                  { return jsVar("currentUserCanNeoProInstaller"); }
+export function currentUserCanNeoRename()                        { return jsVar("currentUserCanNeoRename"); }
+export function currentUserCanNeoRenameSettings()                { return jsVar("currentUserCanNeoRenameSettings"); }
+export function currentUserCanNeoLogView()                       { return jsVar("currentUserCanNeoLogView"); }
+export function currentUserCanNeoReset()                         { return jsVar("currentUserCanNeoReset"); }
+export function currentUserCanNeoSettingsSeeAllSettings()        { return jsVar("currentUserCanNeoSettingsSeeAllSettings"); }
+export function currentUserCanNeoSymlink()                       { return jsVar("currentUserCanNeoSymlink"); }
+export function currentUserCanNeoTutorialHideArrow()             { return jsVar("currentUserCanNeoTutorialHideArrow"); }
+export function currentUserCanNeoToolPasskey()                   { return jsVar("currentUserCanNeoToolPasskey"); }
+export function currentUserCanNeoToolArrayView()                 { return jsVar("currentUserCanNeoToolArrayView"); }
+export function currentUserCanWebsite()                          { return jsVar("currentUserCanWebsite"); }
+export function currentUserCanSaveDomainSettings()               { return jsVar("currentUserCanSaveDomainSettings"); }
+export function currentUserCanPublicEndpoint()                   { return jsVar("currentUserCanPublicEndpoint"); }
