@@ -1,0 +1,30 @@
+.neo-draw--gutenberg-block-edit {
+    position: relative;
+}
+
+.neo-draw--gutenberg-block-create-button {
+    position: absolute;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    transform: translateY(-46px);
+
+    z-index: 1;
+}
+
+.neo-draw--gutenberg-block-edit-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+button.neo-draw--gutenberg-block-button {
+    font-family: sans-serif;
+    padding-left: 34px !important;
+    background-image: url(./img/neo-draw--edit-icon.svg) !important;
+    background-size: 18px !important;
+    background-position: 10px center !important;
+    background-repeat: no-repeat !important;
+}

@@ -1,0 +1,15 @@
+<?php
+namespace NeoDraw\NeoDraw; if (!defined("ABSPATH")) { die("neoWP direct access not allowed"); }
+
+function draw_pagebuilder_init_classic() {
+    if (!class_exists("Classic_Editor")) { return; }
+    if (!\NeoDraw\NeoGlobal\current_user_can__neo_draw()) { return; }
+
+    draw_pagebuilder_init();
+
+    \NeoDraw\NeoGlobal\add_filter_hook("mce_external_plugins", function ($plugin_array) { return array_merge($plugin_array, ["neo_draw__mce_button" => \NeoDraw\NeoGlobal\plugin_url() . "/neo-draw--pb-classic-button-visual.js"]); });
+    \NeoDraw\NeoGlobal\add_filter_hook("mce_buttons", function ($buttons) { return array_merge($buttons, ["neo_draw__mce_button"]); });
+    \NeoDraw\NeoGlobal\enqueue_js("neo-draw--pb-classic-button-text.js", dependencies: ["quicktags"]);
+}
+\NeoDraw\NeoGlobal\add_action_hook("load-post.php",     function () { draw_pagebuilder_init_classic(); });
+\NeoDraw\NeoGlobal\add_action_hook("load-post-new.php", function () { draw_pagebuilder_init_classic(); });

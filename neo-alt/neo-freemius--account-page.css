@@ -1,0 +1,19 @@
+neo-setting-neo-alt#neo-freemius--settings { max-width: min(900px, 100%); }
+neo-setting-neo-alt#neo-freemius--settings .fs-section { margin: 0; }
+neo-setting-neo-alt#neo-freemius--settings .fs-section .nav-tab-wrapper { display: none; }
+neo-setting-neo-alt#neo-freemius--settings #fs_account .postbox { border: none; box-shadow: none; }
+neo-setting-neo-alt#neo-freemius--settings #fs_payments .inside { padding-left: 0; }
+
+#neo-freemius--notices { max-width: 750px; }
+.neo-freemius--notice { background: #fff; border-left: 4px solid green; border-radius: 3px; box-shadow: 0 1px 2px rgba(0,0,0,0.2); margin-bottom: 10px; padding: 10px; }
+.neo-freemius--notice>label { display: none; }
+.neo-freemius--notice>.fs-close { display: none; }
+.neo-freemius--notice a { text-decoration: underline; color: darkblue; }
+
+neo-setting-neo-alt#neo-freemius--settings:has(#fs_connect) { min-width: 0; }
+neo-setting-neo-alt#neo-freemius--settings #fs_connect { width: fit-content; }
+neo-setting-neo-alt#neo-freemius--settings #fs_connect { margin-top: 20px; margin-bottom: 0px; }
+neo-setting-neo-alt#neo-freemius--settings #fs_connect .fs-freemium-licensing { display: none; }
+:is(neo-setting-neo-alt#neo-freemius--settings, #wpbody) #fs_connect .fs-header img:not(#more-specificity) { border-radius: 0; transform: scale(0.9); }
+
+@media (max-width: 767px) { neo-setting-neo-alt#neo-freemius--settings { padding: 0; } }

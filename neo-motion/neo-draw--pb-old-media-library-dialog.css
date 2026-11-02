@@ -1,0 +1,13 @@
+button[id^="menu-item-iframe:neodraw"].media-menu-item, button[id^="menu-item-iframe:neodraw"].media-menu-item:hover {
+    background-image: url(./img/_global--mini-icon.svg) !important;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: right 10px center;
+}
+
+.media-frame-tab-panel[aria-labelledby="menu-item-iframe:neodraw"] .media-frame-content {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}

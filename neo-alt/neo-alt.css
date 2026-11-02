@@ -1,0 +1,188 @@
+#wpwrap { font-size: 16px; }
+.neo-alt--wrap {
+    display: flex; flex-direction: column; min-height: calc(100vh - 52px);
+    #neo-alt--heading {
+        display: flex; align-items: center; gap: 0.25em; margin-bottom: 0.6em;
+        #neo-alt--feedback-button, #neo-alt--settings-button { display: flex; align-items: center; justify-content: center; width: 1.2em; height: 1.2em; padding: 0; background: transparent; border: 0; user-select: none; cursor: pointer; }
+        #neo-alt--feedback-button img, #neo-alt--settings-button img { width: 0.6em; height: 0.6em; opacity: 0.8; transition: transform 120ms ease; }
+        #neo-alt--feedback-button:hover img, #neo-alt--settings-button:hover img { transform: scale(1.1); }
+    }
+
+    #neo-alt--toolbar {
+        position: sticky; top: 42px; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 0.8em; flex-wrap: wrap; padding: 0 4px 0.8em; background: #f0f0f1; box-shadow: 0 -10px 0 #f0f0f1;
+        @media (max-width: 782px) { top: 56px; }
+        @media (max-width: 600px) { top: 10px; }
+        #neo-alt--bulk-controls, #neo-alt--table-actions { display: flex; align-items: center; gap: 0.5em; }
+        #neo-alt--bulk-controls {
+            #neo-alt--accept-all-button, #neo-alt--discard-all-button { display: none; }
+            #neo-alt--discard-all-button::part(button) { background: #DC3545; border-color: #DC3545; }
+            #neo-alt--accept-all-button::part(button)  { background: #28A745; border-color: #28A745; }
+            &.neo-alt--review-actions-visible {
+                #neo-alt--bulk-mode, #neo-alt--bulk-generate-button { display: none; }
+                #neo-alt--accept-all-button, #neo-alt--discard-all-button { display: block; }
+            }
+            #neo-alt--bulk-mode {
+                display: flex; align-items: stretch; height: 2.85em; box-sizing: border-box; border: 1px solid #a0a0a0; border-radius: 999px; overflow: hidden; background: #fff;
+                >button {
+                    border: 0; border-right: 1px solid #d0d0d0; padding: 0 0.85em; background: transparent; color: #1d2327; cursor: pointer;
+                    &:last-child { border-right: 0; }
+                    &.neo-alt--bulk-mode-selected { background: #2271b1; color: #fff; }
+                    &:disabled { opacity: 0.5; cursor: default; }
+                }
+            }
+            #neo-alt--bulk-generate-button { width: 200px; }
+            #neo-alt--bulk-generate-button::part(button) { width: 100%; }
+            #neo-alt--bulk-progress { min-width: 4em; font-variant-numeric: tabular-nums; text-align: right; }
+            #neo-alt--bulk-cancel-button { border: 0; background: transparent; color: #b32d2e; text-decoration: underline; cursor: pointer; }
+            @media (max-width: 767px) { width: 100%; flex-wrap: wrap; }
+        }
+        #neo-alt--table-actions {
+            --neo-alt--table-control-height: 40px; flex-wrap: nowrap;
+            #neo-alt--sort-select, #neo-alt--empty-filter { height: var(--neo-alt--table-control-height); }
+            #neo-alt--empty-filter[disabled] { opacity: 0.5; }
+            #neo-alt--search {
+                display: flex; align-items: center; width: clamp(14em, 22vw, 24em); height: var(--neo-alt--table-control-height); box-sizing: border-box; border: 1px solid #8c8f94; border-radius: 4px; background: #fff; overflow: hidden;
+                &:has(#neo-alt--search-input:disabled) { background: #f0f0f1; }
+                &:focus-within { border-color: #2271b1; box-shadow: 0 0 0 1px #2271b1; }
+                #neo-alt--search-input {
+                    flex: 1; min-width: 0; border: 0; box-shadow: none; padding: 0.45em 0.65em;
+                    &:focus { border: 0; box-shadow: none; outline: 0; }
+                }
+                #neo-alt--search-clear { border: 0; background: transparent; padding: 0.3em 0.5em; font-size: 1em; cursor: pointer; }
+            }
+            .neo-alt--disabled-control-message { display: inline; }
+            @media (max-width: 960px) {
+                width: 100%; flex-wrap: wrap;
+                #neo-alt--search-tooltip { flex: 1 1 18em; }
+                #neo-alt--search { width: 100%; }
+            }
+        }
+    }
+
+    #neo-alt--table-container {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15); background: #fff;
+    }
+    #neo-alt--selection-header { display: flex; align-items: center; justify-content: flex-end; min-height: 36px; box-sizing: border-box; padding-right: 18px; border-bottom: 1px solid #f0f0f1; cursor: pointer; }
+    #neo-alt--table-container :is(#neo-alt--bulk-selection-checkbox, input.neo-alt--row-selection-checkbox) { position: relative; display: flex; align-items: center; justify-content: center; appearance: none; -webkit-appearance: none; width: 36px; height: 36px; margin: 0; border: 0; border-radius: 4px; background: center / 20px no-repeat url("./_global-lucide-icons-thirdparty/square.svg"); box-shadow: none; cursor: pointer; }
+    #neo-alt--table-container :is(#neo-alt--bulk-selection-checkbox, input.neo-alt--row-selection-checkbox)::before { content: none; }
+    #neo-alt--table-container :is(#neo-alt--bulk-selection-checkbox, input.neo-alt--row-selection-checkbox):checked { background-image: url("./_global-lucide-icons-thirdparty/square-check.svg"); }
+    #neo-alt--table-container #neo-alt--bulk-selection-checkbox:indeterminate { background-image: url("./_global-lucide-icons-thirdparty/square-minus.svg"); }
+    #neo-alt--table-container :is(#neo-alt--bulk-selection-checkbox, input.neo-alt--row-selection-checkbox):disabled { display: none; }
+    #neo-alt--table-container :is(#neo-alt--bulk-selection-checkbox, input.neo-alt--row-selection-checkbox):not(:disabled):hover { background-color: rgba(0, 0, 0, 0.04); }
+    #neo-alt--table-container :is(#neo-alt--bulk-selection-checkbox, input.neo-alt--row-selection-checkbox):focus { box-shadow: none; outline: 0; }
+    #neo-alt--table-container :is(#neo-alt--bulk-selection-checkbox, input.neo-alt--row-selection-checkbox):focus-visible { outline: 2px solid var(--wp-admin-theme-color, #2271b1); outline-offset: -4px; }
+    #neo-alt--table {
+        min-height: 0; overflow: visible; background: #fff;
+        .neo-alt--row {
+            display: flex; align-items: stretch; width: 100%; height: 128px; box-sizing: border-box; color: #50575e; transition: opacity 150ms ease, background-color 150ms ease;
+            @media (max-width: 1280px) { height: 144px; }
+            &:nth-child(odd) { background: rgb(255, 255, 255); }
+            &:nth-child(even) { background: rgb(247, 247, 247); }
+            &:hover { background: #f0f6fc; }
+            &.neo-alt--row-saving {
+                .neo-alt--save-status { cursor: default; }
+            }
+            &:not(.neo-alt--row-changed) {
+                .neo-alt--undo-tooltip { display: none; }
+            }
+            .neo-alt--preview {
+                flex: 0 0 132px; display: flex; align-items: center; justify-content: center; padding: 10px; border: 0; background: transparent; cursor: pointer; box-sizing: border-box;
+                >:is(img, video) { width: 100%; height: 92px; object-fit: contain; border-radius: 4px; }
+                @media (max-width: 782px) {
+                    flex-basis: 94px;
+                    >:is(img, video) { height: 72px; }
+                }
+            }
+            .neo-alt--fields {
+                flex: 1 1 52em; display: flex; flex-direction: column; justify-content: center; gap: 2px; min-width: 18em; padding: 6px 0; box-sizing: border-box;
+                @media (max-width: 782px) {
+                    min-width: 0;
+                }
+                .neo-alt--field {
+                    --neo-global--ai-generation-border-radius: 7px; position: relative; display: flex; align-items: center; min-width: 0; max-width: 100%; padding: 0.2em 0; border: 1px solid transparent; border-radius: 7px; background: transparent; overflow: hidden; transition: border-color 120ms ease, background-color 120ms ease, box-shadow 120ms ease;
+                    &.neo-alt--title-field, &.neo-alt--alt-field { width: fit-content; }
+                    &:focus-within { border-color: #2271b1; background: #fff; box-shadow: 0 0 0 1px #2271b1; }
+                    &.neo-alt--field-draft { border-color: #72aee6; background: #fff; }
+                    &.neo-alt--field-pending { border-color: transparent; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(105deg, #a900ff, #00ff80) border-box; }
+                    --neo-alt--horizontal-input-padding: 0.65em;
+                    >:is(input, textarea) {
+                        flex: 1 1 auto; min-width: 0; width: 100%; margin: 0; padding: 0; padding-left: var(--neo-alt--horizontal-input-padding); border: 0; border-radius: 0; box-shadow: none; resize: none; line-height: 1.25; background: transparent;
+                        &:focus { border: 0; box-shadow: none; outline: 0; }
+                        &:disabled { opacity: 1; color: inherit; -webkit-text-fill-color: currentColor; background: transparent; cursor: wait; }
+                    }
+                    >.neo-alt--title-input { field-sizing: content; flex: 0 1 auto; min-height: 0; box-sizing: border-box; padding-top: 0; padding-bottom: 0; font-weight: 700; }
+                    >.neo-alt--alt-input { flex: 0 1 auto; min-width: 8em; box-sizing: border-box; overflow-x: hidden; overflow-y: auto; white-space: pre-wrap; overflow-wrap: break-word; font-weight: 400; }
+                    .neo-alt--field-options { display: flex; align-items: center; align-self: stretch; gap: var(--neo-alt--horizontal-input-padding); padding-left: var(--neo-alt--horizontal-input-padding); padding-right: var(--neo-alt--horizontal-input-padding); }
+                    .neo-alt--field-counter { display: flex; align-items: center; align-self: stretch; box-sizing: border-box; color: #646970; font-size: 0.7em; line-height: 1; text-align: left; white-space: nowrap; }
+                    .neo-alt--alt-counter-tooltip { display: flex; align-items: center; align-self: stretch; }
+                    .neo-alt--alt-counter-tooltip::part(icon) { display: flex; align-items: center; height: 100%; }
+                    .neo-alt--alt-counter.neo-alt--alt-counter-exceeded { color: #DC3545; }
+                    .neo-alt--field-ai-tooltip, .neo-alt--field-save-tooltip { opacity: 0; pointer-events: none; transition: opacity 120ms ease; }
+                    .neo-alt--field-ai-tooltip:has(.neo-alt--field-ai-button[data-neo-global--ai-generating]) { opacity: 1; pointer-events: auto; }
+                    .neo-alt--field-ai-tooltip:has(.neo-alt--field-ai-button[data-neo-alt--generation-queued]) { opacity: 1; pointer-events: auto; }
+                    .neo-alt--field-ai-button, .neo-alt--field-save-button {
+                        display: flex; align-items: center; justify-content: center; width: 1em; height: 1em; box-sizing: border-box; padding: 0; border: 0; background: transparent; cursor: pointer;
+                        img { width: 100%; height: 100%; }
+                        &:disabled { opacity: 0.5; cursor: wait; }
+                    }
+                    .neo-alt--field-save-tooltip[hidden] { display: none; }
+                    .neo-alt--field-save-button img { filter: invert(38%) sepia(72%) saturate(650%) hue-rotate(85deg) brightness(82%); }
+                    &:focus-within, &.neo-alt--field-draft, &.neo-alt--field-pending {
+                        .neo-alt--field-ai-tooltip, .neo-alt--field-save-tooltip { opacity: 1; pointer-events: auto; }
+                    }
+                }
+                .neo-alt--field-line {
+                    display: flex; align-items: center; width: 100%; min-width: 0;
+                }
+                .neo-alt--filename-line {
+                    display: flex; align-items: center; gap: 0.5em; min-height: 1.3em; padding-left: 10px; font-size: 0.7em; line-height: 1.3;
+                    .neo-alt--filename { overflow: hidden; flex: 0 1 auto; min-width: 0; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; opacity: 0.65; cursor: pointer; }
+                    .neo-alt--filename:hover { text-decoration: underline; }
+                    .neo-alt--filename:disabled { cursor: wait; }
+                    .neo-alt--copy-tooltip { flex: 0 0 auto; line-height: 1; }
+                    .neo-alt--copy-button { display: flex; align-items: center; justify-content: center; width: 1.3em; height: 1.3em; padding: 0; border: 0; background: transparent; cursor: pointer; opacity: 0.65; }
+                    .neo-alt--copy-button:hover { opacity: 1; }
+                    .neo-alt--copy-button:disabled { cursor: wait; }
+                    .neo-alt--copy-button img { width: 100%; height: 100%; }
+                    .neo-alt--save-status { color: #646970; font: inherit; }
+                    .neo-alt--save-status[hidden] { display: none; }
+                    .neo-alt--row-error { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #DC3545; font: inherit; }
+                    .neo-alt--row-error[hidden] { display: none; }
+                }
+            }
+            &:hover {
+                .neo-alt--field { border-color: #c3c4c7; background: #fff; }
+                .neo-alt--field.neo-alt--field-pending { border-color: transparent; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(105deg, #a900ff, #00ff80) border-box; }
+                .neo-alt--field-save-tooltip { opacity: 1; pointer-events: auto; }
+            }
+            .neo-alt--row-actions {
+                flex: 0 0 96px; display: flex; align-items: center; justify-content: flex-end; gap: 0.25em; margin-left: auto; padding: 10px 18px 10px 4px; box-sizing: border-box;
+                button {
+                    display: flex; align-items: center; justify-content: center; width: 2.4em; height: 2.4em; padding: 0.52em; border: 0; border-radius: 50%; background: transparent; cursor: pointer;
+                    &:hover { background: rgba(0, 0, 0, 0.08); }
+                    &:disabled { opacity: 0.5; cursor: wait; }
+                }
+                img { width: 100%; height: 100%; }
+                @media (max-width: 782px) {
+                    flex-basis: 88px; padding: 6px 14px 6px 2px;
+                }
+            }
+            @media (max-width: 782px) {
+                .neo-alt--fields .neo-alt--title-field { border-color: #c3c4c7; background: #fff; }
+                .neo-alt--fields .neo-alt--alt-field { border-color: #c3c4c7; background: #fff; }
+            }
+            @media (max-width: 767px) {
+                .neo-alt--fields .neo-alt--field .neo-alt--field-ai-tooltip   { opacity: 1; pointer-events: auto; }
+                .neo-alt--fields .neo-alt--field .neo-alt--field-save-tooltip { opacity: 1; pointer-events: auto; }
+                .neo-alt--fields .neo-alt--field .neo-alt--field-counter, .neo-alt--fields .neo-alt--field .neo-alt--alt-counter-tooltip { display: none; }
+            }
+        }
+        .neo-alt--row:hover .neo-alt--field .neo-alt--field-options >.neo-alt--field-ai-tooltip { opacity: 1; pointer-events: auto; transition: none; }
+    }
+
+    #neo-alt--empty-state { padding: 3em; text-align: center; color: #646970; background: #fff; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15); }
+    #neo-alt--footer {
+        display: flex; justify-content: space-between; align-items: center; padding: 0.75em 0.2em 0; color: #646970;
+        a { color: inherit; }
+    }
+}

@@ -1,0 +1,206 @@
+[
+    {
+        "comment": [
+            "This file defines the fonts the user can use.",
+            "The fonts must be added to this folder in WOFF2 format.",
+            "The script download_fonts.py downloads the font files and license files from Google Fonts.",
+            "The 'weights' attribute defines the font weights that are available for the font in several font files.",
+            "The 'id' and 'ids' attributes define stable Excalidraw-compatible font IDs.",
+            "Fonts with the 'builtinFontFace' attribute are bundled Excalidraw fonts and use statically imported font faces.",
+            "Fonts with the 'local' attribute set to true are system fonts and are available through the browser or operating system.",
+            "Fonts that are neither built-in nor local are additional fonts that are available in the same folder as this file.",
+            "The font 'Helvetica' is represented here as 'System Sans Serif', which is a similar font installed on every system. !!!! PAUL HILFE BEI ENGLISCH GRAMATIK",
+            "All changes in the Excalidraw code relevant to this implementation are marked with '#neoDrawFont'."
+        ]
+    },
+    {
+        "headingText": {
+            "en": "Paragraph fonts",
+            "de": "Absatz-Schriften"
+        }
+    },
+    {
+        "fontName": "Open Sans",
+        "weights": [
+            400,
+            700
+        ],
+        "ids": {
+            "400": 10000,
+            "700": 10001
+        },
+        "tags": {
+            "en": "legible, web-optimized, professional",
+            "de": "leserlich, web-optimiert, professionell"
+        }
+    },
+    {
+        "fontName": "Nunito",
+        "weights": [
+            500
+        ],
+        "id": 6,
+        "tags": {
+            "en": "accessible, playful, round",
+            "de": "zugänglich, spielerisch, rund"
+        },
+        "builtinFontFace": "Nunito"
+    },
+    {
+        "fontName": "sans-serif",
+        "weights": [
+            400,
+            700
+        ],
+        "ids": {
+            "400": 2,
+            "700": 10111
+        },
+        "tags": {
+            "en": "System Font, Standard",
+            "de": "System-Font, Standard"
+        },
+        "displayedFontName": "System Sans Serif",
+        "builtinFontFace": "Helvetica",
+        "local": true
+    },
+    {
+        "headingText": {
+            "en": "Headline fonts",
+            "de": "Headline-Schriften"
+        }
+    },
+    {
+        "fontName": "Oxanium",
+        "weights": [
+            400,
+            700
+        ],
+        "ids": {
+            "400": 10140,
+            "700": 10141
+        },
+        "tags": {
+            "en": "high-tech, modern, solid",
+            "de": "high-tech, modern, solide"
+        }
+    },
+    {
+        "headingText": {
+            "en": "Serif fonts",
+            "de": "Serifen-Schriften"
+        }
+    },
+    {
+        "fontName": "Merriweather",
+        "weights": [
+            400,
+            700
+        ],
+        "ids": {
+            "400": 10210,
+            "700": 10211
+        },
+        "tags": {
+            "en": "robust, powerful, enduring",
+            "de": "robust, kraftvoll, beständig"
+        }
+    },
+    {
+        "fontName": "serif",
+        "weights": [
+            400,
+            700
+        ],
+        "ids": {
+            "400": 10260,
+            "700": 10261
+        },
+        "tags": {
+            "en": "System Font, Standard",
+            "de": "System-Font, Standard"
+        },
+        "displayedFontName": "System Serif",
+        "local": true
+    },
+    {
+        "headingText": {
+            "en": "Decorative fonts",
+            "de": "Dekorative Schriften"
+        }
+    },
+    {
+        "fontName": "Patrick Hand",
+        "weights": [
+            400
+        ],
+        "id": 10270,
+        "tags": {
+            "en": "childlike, personal, relaxed",
+            "de": "kindlich, persönlich, locker"
+        }
+    },
+    {
+        "fontName": "Virgil",
+        "weights": [
+            400
+        ],
+        "id": 1,
+        "tags": {
+            "en": "creative, lively, eye-catching",
+            "de": "kreativ, lebhaft, auffällig"
+        },
+        "builtinFontFace": "Virgil",
+        "deprecated": true
+    },
+    {
+        "fontName": "Excalifont",
+        "weights": [
+            400
+        ],
+        "id": 5,
+        "tags": {
+            "en": "hand-drawn, natural, sketchy",
+            "de": "handgezeichnet, natürlich, skizzenhaft"
+        },
+        "builtinFontFace": "Excalifont"
+    },
+    {
+        "headingText": {
+            "en": "Monospace fonts",
+            "de": "Monospace-Schriften"
+        }
+    },
+    {
+        "fontName": "Roboto Mono",
+        "weights": [
+            400,
+            700
+        ],
+        "ids": {
+            "400": 10340,
+            "700": 10341
+        },
+        "tags": {
+            "en": "digital, clear, technical",
+            "de": "digital, klar, technisch"
+        }
+    },
+    {
+        "fontName": "monospace",
+        "weights": [
+            400,
+            700
+        ],
+        "ids": {
+            "400": 10390,
+            "700": 10391
+        },
+        "tags": {
+            "en": "System Font, Standard",
+            "de": "System-Font, Standard"
+        },
+        "displayedFontName": "System Monospace",
+        "local": true
+    }
+]
