@@ -1,0 +1,56 @@
+.neo-draw--editor-dialog {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1000000;
+    display: flex; justify-content: center; align-items: center;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0); animation: neo-draw--editor-dialog-background 0.2s ease-out; animation-fill-mode: forwards;
+    padding: 2.5vmin; box-sizing: border-box;
+}
+
+.neo-draw--editor-dialog-box {
+    position: relative; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%; height: 100%;
+    max-width: 100%; max-height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.neo-draw--editor-dialog-box>iframe.neo-draw--editor-iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; overflow: hidden;
+}
+
+.neo-draw--editor-dialog-full-size .neo-draw--editor-dialog-box { width: 100%; height: 100%; border-radius: 0px; transform: none; animation: none; }
+
+.neo-draw--editor-dialog { background-color: rgba(0, 0, 0, 0); animation: neo-draw--editor-dialog-background 0.2s ease-out; animation-fill-mode: forwards; }
+@keyframes neo-draw--editor-dialog-background {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to { background-color: rgba(0, 0, 0, 0.5); }
+}
+
+.neo-draw--editor-dialog-box { transform: scale(0.2); animation: neo-draw--editor-dialog-box-scale 0.2s ease-out; animation-fill-mode: forwards; }
+@keyframes neo-draw--editor-dialog-box-scale {
+    from { transform: scale(0.2); }
+    to { transform: scale(1); }
+}
+
+.neo-draw--editor-dialog-box>iframe.neo-draw--editor-iframe        { opacity: 0; transition: opacity 0s, transform 500ms ease-in; pointer-events: none; }
+.neo-draw--editor-dialog-box>iframe.neo-draw--editor-iframe-loaded { opacity: 1; transition: opacity 1s, transform 500ms ease-in; pointer-events: auto; }
+
+.neo-draw--editor-dialog-spinner {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 50px; height: 50px; border-radius: 50%;
+    border: 6px solid rgba(0, 0, 0, 0.2); border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.neo-draw--editor-dialog-spinner { animation: neo-draw--editor-dialog-spinner-rotate 1s linear infinite; }
+@keyframes neo-draw--editor-dialog-spinner-rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes neo-draw--editor-dialog-spinner-show { from { opacity: 0; } to { opacity: 1; } }
+.neo-draw--editor-dialog-box > .neo-draw--editor-loading-close {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, calc(-50% + 48px));
+    border: none; background: transparent; font-size: 1.5em; color: gray; cursor: pointer;
+    opacity: 0; animation: neo-draw--editor-dialog-spinner-show 0.5s 8s forwards;
+}

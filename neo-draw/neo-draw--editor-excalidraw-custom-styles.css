@@ -1,0 +1,448 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.excalidraw-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+:root[dir="ltr"]
+    .excalidraw
+    .layer-ui__wrapper
+    .zen-mode-transition.App-menu_bottom--transition-left {
+    transform: none;
+}
+
+.HintViewer {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.neo-draw--top-right-ui {
+    position: fixed;
+    top: var(--editor-container-padding);
+    right: var(--editor-container-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: calc(var(--lg-button-size) / 4);
+}
+
+.mobile-misc-tools-container {
+    --original-top: calc(5em - var(--editor-container-padding));
+    top: calc(var(--original-top) + 4 * var(--lg-button-size) + 3 * calc(var(--lg-button-size) / 4)) !important;
+}
+
+@media screen and (max-width: 860px) {
+    .neo-draw--top-right-ui {
+        top: 6em;
+    }
+    .mobile-misc-tools-container {
+        top: calc(var(--original-top) + 4 * var(--lg-button-size) + 3 * calc(var(--lg-button-size) / 4) + 6em) !important;
+    }
+}
+
+.layer-ui__wrapper__top-right>label {
+    display: none;
+}
+
+.neo-draw--save-close-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.excalidraw .neo-draw--save-close-buttons .neo-draw--close-button, .excalidraw.neo-draw--save-close-buttons .neo-draw--close-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 1;
+    transition: border-top-left-radius 0.3s, border-bottom-left-radius 0.3s;
+}
+.excalidraw .neo-draw--save-close-buttons:not(.neo-draw--dirty, .neo-draw--saving)
+    .neo-draw--close-button, .excalidraw.neo-draw--save-close-buttons:not(.neo-draw--dirty, .neo-draw--saving)
+    .neo-draw--close-button {
+    border-top-left-radius: var(--border-radius-lg);
+    border-bottom-left-radius: var(--border-radius-lg);
+}
+.excalidraw .neo-draw--save-close-buttons:not(.neo-draw--dirty, .neo-draw--saving)
+    .neo-draw--save-button, .excalidraw.neo-draw--save-close-buttons:not(.neo-draw--dirty, .neo-draw--saving)
+    .neo-draw--save-button {
+    border-top-right-radius: var(--border-radius-lg);
+    border-bottom-right-radius: var(--border-radius-lg);
+}
+.excalidraw .neo-draw--save-close-buttons .neo-draw--save-button, .excalidraw.neo-draw--save-close-buttons .neo-draw--save-button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    transition: transform 0.3s ease-in-out, border-top-right-radius 0.3s,
+        border-bottom-right-radius 0.3s;
+}
+.neo-draw--save-button:disabled {
+    pointer-events: none;
+    transform: translateX(100%) scale(0.99);
+}
+.neo-draw--close-button:disabled {
+    pointer-events: none;
+    cursor: default;
+}
+.neo-draw--settings-button {
+    color: inherit;
+    text-decoration: none;
+}
+
+.neo-draw--feedback-button { position: fixed; right: calc(var(--editor-container-padding) + var(--lg-button-size) + calc(var(--lg-button-size) / 4)); bottom: var(--editor-container-padding); z-index: 5; }
+.neo-draw--feedback-button img { width: calc(var(--lg-icon-size) * 0.8); height: calc(var(--lg-icon-size) * 0.8); }
+
+.neo-draw--close-button:disabled img,
+.neo-draw--save-button:disabled img {
+    opacity: 0.33;
+}
+.neo-draw--save-button:disabled:hover {
+    background-color: var(--button-bg, var(--island-bg-color));
+}
+
+.neo-draw--saving .neo-draw--save-button {
+    pointer-events: none;
+}
+.neo-draw--save-button .neo-draw--spinner {
+    display: none;
+}
+.neo-draw--saving .neo-draw--save-button .neo-draw--spinner {
+    display: inline-block;
+}
+.neo-draw--saving .neo-draw--save-button img {
+    display: none;
+}
+
+.HelpDialog__header {
+    display: none !important;
+}
+
+.HelpDialog__island--neodraw, .HelpDialog__island--neo-draw--animation {
+    margin: 24px 0;
+}
+
+.HelpDialog .Dialog__content h3 {
+    display: none;
+}
+
+.neo-draw--animation-loading {
+    pointer-events: none;
+}
+.neo-draw--animation-loading span, .neo-draw--animation-loading img, .neo-draw--motion-preview-loading span, .neo-draw--motion-preview-loading img {
+    display: none;
+}
+.neo-draw--editor-button .neo-draw--spinner {
+    display: none;
+}
+.neo-draw--animation-loading .neo-draw--spinner {
+    display: inline-block;
+}
+.neo-draw--motion-preview-loading {
+    pointer-events: none;
+}
+.neo-draw--motion-preview-loading .neo-draw--spinner {
+    display: inline-block;
+}
+
+.neo-draw--editor-button {
+    width: var(--lg-button-size) !important;
+    height: var(--lg-button-size) !important;
+}
+
+.layer-ui__wrapper__top-right .sidebar-trigger {
+    width: var(--lg-button-size);
+}
+
+.neo-draw--editor-button img,
+.neo-draw--editor-button .neo-draw--spinner {
+    font-size: 5px;
+
+    --button-icon-size-factor: 0.8;
+    width: calc(var(--lg-icon-size) * var(--button-icon-size-factor));
+    height: calc(var(--lg-icon-size) * var(--button-icon-size-factor));
+    min-width: calc(var(--lg-icon-size) * var(--button-icon-size-factor));
+    min-height: calc(var(--lg-icon-size) * var(--button-icon-size-factor));
+}
+.neo-draw--close-button img { --button-icon-size-factor: 0.7; }
+.neo-draw--save-button img { --button-icon-size-factor: 0.7; }
+.neo-draw--settings-button img { --button-icon-size-factor: 0.9; opacity: 0.95; }
+.neo-draw--icon-library-button img   { --button-icon-size-factor: 0.8; }
+.neo-draw--animation-button img { --button-icon-size-factor: 0.95; }
+.neo-draw--motion-preview-button img { --button-icon-size-factor: 0.95; }
+
+.motion-starter-hint {
+    position: fixed;
+    right: var(--editor-container-padding, 16px);
+    bottom: var(--editor-container-padding, 16px);
+    z-index: 999999;
+    max-width: min(330px, calc(100vw - 32px));
+    padding: 16px 18px 14px;
+    border: 1px solid var(--button-gray-2, #d6d6d6);
+    border-radius: var(--border-radius-lg, 8px);
+    background: var(--island-bg-color, #ffffff);
+    box-shadow: var(--shadow-island, 0 4px 16px rgb(0 0 0 / 0.18));
+    color: var(--text-primary-color, #1b1b1f);
+    font-size: 14px;
+}
+.motion-starter-hint-text {
+    padding-right: 22px;
+    line-height: 1.35;
+}
+.motion-starter-hint-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    border-radius: var(--border-radius-md, 6px);
+    background: transparent;
+    color: var(--text-primary-color, #1b1b1f);
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 22px;
+}
+.motion-starter-hint-close:hover {
+    background: var(--button-hover-bg);
+}
+.motion-starter-hint-button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: var(--border-radius-md, 6px);
+    background: #1c7ed6;
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
+.motion-starter-hint-button:hover {
+    filter: brightness(1.1);
+}
+.motion-starter-hint-button:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.neo-draw--error-dialog-content {
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.neo-draw--dialog-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.neo-draw--dialog .neo-draw--dialog-button-container .neo-draw--dialog-button {
+    background-color: white;
+    margin: 0 5px;
+    width: fit-content;
+}
+.neo-draw--dialog .neo-draw--dialog-button-container .neo-draw--dialog-primary-button {
+    background-color: #1c7ed6;
+    color: white;
+}
+.neo-draw--dialog .neo-draw--dialog-button-container .neo-draw--dialog-primary-button:hover {
+    background-color: #1c7ed6;
+    filter: brightness(1.1);
+}
+.neo-draw--dialog-box.neo-draw--filename-dialog-box {
+    align-items: stretch;
+    max-width: min(360px, calc(100% - 32px));
+    padding: 24px;
+    .neo-draw--filename-dialog-title {
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .neo-draw--filename-dialog-label {
+        font-size: 0.85em;
+        font-weight: 600;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+    .neo-draw--filename-dialog-input {
+        border: 1px solid var(--button-gray-2, #d6d6d6);
+        border-radius: 6px;
+        box-sizing: border-box;
+        font: inherit;
+        padding: 10px 12px;
+        width: 100%;
+    }
+    .neo-draw--filename-dialog-input:focus {
+        border-color: #1c7ed6;
+        box-shadow: 0 0 0 3px rgba(28, 126, 214, 0.15);
+        outline: none;
+    }
+    .neo-draw--dialog-button-container {
+        gap: 8px;
+        justify-content: flex-end;
+        margin-top: 16px;
+        .neo-draw--dialog-button { margin: 0; }
+    }
+}
+
+.neo-draw--dialog-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+@keyframes grow-dialog {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.neo-draw--dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neo-draw--backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.neo-draw--dialog-box {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    padding: 48px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+    animation: grow-dialog 0.2s;
+}
+
+.neo-draw--save-multi-usage-dialog-box {
+    max-width: min(420px, calc(100% - 32px));
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.neo-draw--spinner {
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    border-top-color: black;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+    animation: spin 1s linear infinite;
+}
+
+.neo-draw--dialog-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px;
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.neo-draw--dialog-close img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+}
+
+.neo-draw--dialog-top-right-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--editor-container-padding, 16px);
+    z-index: 2;
+}
+
+.neo-draw--dialog-box-full-size {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.neo-draw--dialog-box-full-size iframe {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: none;
+}
+
+.neo-draw--dialog-loading {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    pointer-events: none;
+}
+
+.neo-draw--dialog-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+    border-top-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.neo-draw--dialog-box-full-size.neo-draw--dialog-loading-active > iframe {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.neo-draw--dialog-box-full-size:not(.neo-draw--dialog-loading-active) > iframe {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s;
+}
+
+.neo-draw--icon-library-dialog-box .neo-draw--dialog-close {
+    z-index: 1;
+    background-color: white;
+    padding-right: 8px;
+    margin-right: 16px;
+    border-bottom-left-radius: 20px;
+}

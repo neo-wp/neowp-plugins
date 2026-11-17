@@ -1,0 +1,9 @@
+.bricks-popup.browser {
+    &.neo-draw--bricks-editor-open { display: none; }
+    .neo-draw--bricks-heading { display: flex; align-items: center; flex-wrap: wrap; gap: var(--builder-spacing); }
+    .neo-draw--bricks-create-button { display: inline-flex; align-items: center; gap: .4em; flex: none; background: var(--builder-bg-2); color: var(--builder-color); }
+    .neo-draw--bricks-create-button img { width: 1.2em; height: 1.2em; }
+    .title-actions .neo-draw--bricks-edit-button { display: inline-flex; align-items: center; justify-content: center; }
+    .title-actions .neo-draw--bricks-edit-button img { width: 1em; height: 1em; }
+    .neo-draw--bricks-create-button[hidden], .title-actions .neo-draw--bricks-edit-button[hidden] { display: none !important; }
+}

@@ -1,0 +1,451 @@
+:root {
+    --settings-area-height: 56px;
+}
+
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
+animation-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+image-container {
+    position: relative;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+    margin-bottom: calc(var(--settings-area-height) / 2 + 12px);
+}
+
+image-container .neo-animate--preview, image-container .neo-animate--ghost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.neo-animate--ghost {
+    opacity: .25;
+    pointer-events: none;
+    filter: grayscale();
+}
+
+image-container .neo-animate--ghost [data-neo-animate--animatable] {
+    display: none;
+}
+image-container .neo-animate--ghost [data-neo-animate--animatable].neo-animate--animation-future {
+    display: block;
+    opacity: 1;
+}
+
+.neo-animate--animating {
+    pointer-events: none;
+}
+
+.neo-animate--animating + .neo-animate--ghost {
+    display: none;
+}
+
+svg text {
+    user-select: none;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.select-button {
+    position: relative;
+}
+
+.select-button > neo-select-neo-animate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    --neo-select-border-radius-neo-animate: 100%;
+    --neo-select-padding-neo-animate: 0;
+    cursor: pointer;
+}
+
+.select-button > neo-select-neo-animate::part(trigger) {
+    opacity: 0;
+}
+
+settings-area-container {
+    position: relative;
+    z-index: 1;
+}
+
+settings-area-container > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+settings-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: var(--settings-area-height);
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+settings-area > * {
+    margin: 0 12px;
+    height: var(--settings-area-height);
+    border-radius: var(--settings-area-height);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+settings-area > .button {
+    width: var(--settings-area-height);
+    min-width: var(--settings-area-height);
+    border: none;
+    cursor: pointer;
+}
+
+settings-area > .button img {
+    width: 55%;
+    height: 55%;
+}
+
+settings-area > label.duration {
+    padding: 0 24px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+settings-area > label.duration > input {
+    font-size: 24px;
+    width: 64px;
+    border: none;
+    text-align: center;
+}
+
+settings-area > label.duration.invalid {
+    outline: 2px solid red;
+}
+
+.seconds {
+    user-select: none;
+}
+
+input[type=number]:not(:focus) {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+    cursor: pointer;
+}
+input[type=number]:not(:focus)::-webkit-inner-spin-button,
+input[type=number]:not(:focus)::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+timeline-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 0;
+
+    background: linear-gradient(to bottom, rgba(16, 16, 16, 0.05) 0%, white 20%, white 100%);
+}
+
+timeline-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 64px;
+    margin-right: 16px;
+}
+
+timeline-controls > .button {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+timeline-controls > .button > img {
+    width: 55%;
+    height: 55%;
+}
+
+timeline-controls button {
+    outline: none;
+}
+
+timeline-controls button:focus-visible, timeline-controls .select-button:focus-visible, settings-area .select-button:focus-visible {
+    outline: 2px solid #0080ff;
+}
+
+timeline-controls > button.play:disabled {
+    filter: grayscale();
+    cursor: default;
+}
+
+timeline-controls > button.play:disabled:hover {
+    transform: none;
+}
+
+timeline-scroll-container {
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    --frame-height: 150px;
+    overflow-x: scroll;
+    overflow-y: visible;
+    mask-image: linear-gradient(to right, transparent 0%, white 5%, white 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, white 5%, white 95%, transparent 100%);
+}
+
+timeline-scroll-container, timeline-controls {
+    --timeline-vertical-padding: 42px;
+    padding-top: calc(var(--settings-area-height) / 2 + var(--timeline-vertical-padding));
+    padding-bottom: var(--timeline-vertical-padding);
+}
+
+timeline-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+timeline-container .frame {
+    --button-size: 32px;
+    --horizontal-frame-margin: 42px;
+
+    position: relative;
+    box-shadow: 0 0 8px #80808050;
+    border-radius: 6px;
+    margin: 8px calc(var(--horizontal-frame-margin) / 2);
+    cursor: pointer;
+    outline: 1px solid #80808014;
+    transition: outline 75ms;
+}
+
+timeline-container .frame svg {
+    width: var(--frame-height);
+    height: var(--frame-height);
+    object-fit: contain;
+}
+
+timeline-container .frame:first-child {
+    margin-left: calc(var(--horizontal-frame-margin) * 1.5);
+}
+
+timeline-container .frame:last-child {
+    margin-right: 120px;
+}
+
+timeline-container .frame.selected {
+    outline: 4px solid #00d000;
+}
+
+.frame button {
+    width: var(--button-size);
+    height: var(--button-size);
+    border: none;
+    box-shadow: 0 0 8px #80808050;
+    outline: 1px solid #80808014;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.frame button img {
+    width: calc(0.375 * var(--button-size));
+    height: calc(0.375 * var(--button-size));
+}
+
+.frame .delete {
+    position: absolute;
+    top: calc(var(--button-size) / -2);
+    right: calc(var(--button-size) / -2);
+    z-index: 2;
+    opacity: 0;
+}
+.frame:hover .delete {
+    opacity: 1;
+}
+.frame:hover .delete:disabled {
+    opacity: 0;
+}
+
+.frame .addFrameBetween {
+    position: absolute;
+    width: var(--horizontal-frame-margin);
+    height: 100%;
+    top: 0;
+    left: calc(0px - var(--horizontal-frame-margin));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity: 1;
+}
+
+.frame:first-child > .addFrameBetween {
+    opacity: 0;
+}
+.frame:first-child > .addFrameBetween:hover {
+    opacity: 1;
+}
+
+.frame.not-animated > .addFrameBetween {
+    opacity: 1;
+}
+@media (hover: none) {
+    .frame .addFrameBetween {
+        opacity: 1 !important;
+    }
+}
+
+.frame .stop {
+    display: none;
+    position: absolute;
+    top: calc(50% - var(--button-size) / 2);
+    left: calc(50% - var(--button-size) / 2);
+}
+.frame.selected.playing .stop {
+    display: block;
+}
+
+[data-neo-animate--animatable] {
+    transition: opacity 200ms;
+}
+timeline-container svg .neo-animate--animation-past {
+    opacity: .2;
+}
+timeline-container svg .neo-animate--animation-current {
+    opacity: 1;
+}
+timeline-container svg .neo-animate--animation-future {
+    opacity: 0;
+}
+
+timeline-container svg .neo-animate--animation-none {
+    opacity: 0;
+}
+timeline-container :last-child svg .neo-animate--animation-none {
+    opacity: .25;
+}
+
+timeline-container .frame.not-animated {
+    position: relative;
+    box-shadow: none;
+    border: none;
+    cursor: default;
+    transition: opacity 200ms;
+    opacity: 1;
+}
+
+timeline-container .frame.not-animated:not(:has(svg .neo-animate--animation-none)) {
+    box-shadow: none;
+    outline: none;
+}
+timeline-container .frame.not-animated:not(:has(svg .neo-animate--animation-none)) > * {
+    opacity: 0;
+    pointer-events: none;
+}
+
+timeline-container .frame.not-animated:not(:has(svg .neo-animate--animation-none)) > .addFrameBetween {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.frame.not-animated [data-neo-animate--animatable] {
+    opacity: 0;
+}
+.frame.not-animated svg .neo-animate--animation-none {
+    opacity: 0.5;
+}
+
+.frame .not-animated-hint {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 0.75em;
+    user-select: none;
+    opacity: 0.5;
+}
+
+.frame.not-animated .addMissing {
+    display: none;
+    position: absolute;
+    width: calc(100% - 20px);
+    margin: 10px;
+    bottom: 0;
+    border-radius: 100px;
+    opacity: 0.8;
+    z-index: 1;
+}
+.frame.not-animated:hover .addMissing {
+    display: block;
+}
+
+image-container > svg [data-neo-animate--animatable]:hover {
+    cursor: pointer;
+}
+
+image-container > svg:not(.neo-animate--animating) [data-neo-animate--animatable] {
+    filter: grayscale() opacity(1.0) invert(0.1);
+    opacity: 1;
+}
+
+image-container:not(.alt-key-pressed) > svg:not(.neo-animate--animating) [data-neo-animate--animatable].neo-animate--animation-past,
+image-container:not(.alt-key-pressed) > svg:not(.neo-animate--animating) [data-neo-animate--animatable].neo-animate--animation-future {
+    filter: grayscale() opacity(0.5) invert(0.1) drop-shadow(0 0 1px #808080);
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+image-container > svg:not(.neo-animate--animating) [data-neo-animate--animatable].neo-animate--animation-current {
+    filter: grayscale() opacity(0.5) invert(0.1) drop-shadow(0 0 1px #00ff00);
+    opacity: 1.0;
+}

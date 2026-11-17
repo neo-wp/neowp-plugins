@@ -1,0 +1,21 @@
+.neo-alt--wp-alt-text-integration { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.neo-alt--wp-alt-text-field { position: relative; display: block; min-width: 0; }
+.neo-alt--wp-alt-text-integration-sibling .neo-alt--wp-alt-text-field { height: 0; }
+.neo-alt--wp-alt-text-effect-field { position: absolute; z-index: 3; right: auto; display: block; min-height: 0 !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box; pointer-events: none; --neo-global--ai-generation-border-radius: 4px; }
+.neo-alt--wp-alt-text-field > textarea, .neo-alt--wp-alt-text-field > input { float: none !important; width: 100% !important; padding-right: 34px !important; box-sizing: border-box; }
+.neo-alt--wp-alt-text-ai-tooltip { position: absolute; z-index: 4; top: 50%; right: 7px; display: flex; transform: translateY(-50%); }
+.neo-alt--wp-alt-text-ai-button { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; padding: 2px; border: 0; background: transparent; color: #646970; cursor: pointer; }
+.neo-alt--wp-alt-text-ai-button:hover { color: #1d2327; }
+.neo-alt--wp-alt-text-ai-button:disabled { opacity: 0.55; cursor: default; }
+.neo-alt--wp-alt-text-ai-button img { width: 17px; height: 17px; }
+.neo-alt--wp-overview-link { align-self: flex-start; color: #757575; font-size: 11px; line-height: 1.3; text-decoration: underline; }
+.neo-alt--wp-overview-link:hover { color: #50575e; }
+
+.neo-alt--wp-integration-swal { z-index: 200000 !important; }
+
+.media-sidebar .setting > .neo-alt--wp-alt-text-integration, .attachment-details .setting > .neo-alt--wp-alt-text-integration { float: right; width: 65%; min-width: 0; margin: 1px; margin-left: 0; padding-top: 0; text-align: left; }
+.media-sidebar .setting .neo-alt--wp-alt-text-field, .media-sidebar .setting .neo-alt--wp-alt-text-effect-field, .attachment-details .setting .neo-alt--wp-alt-text-field, .attachment-details .setting .neo-alt--wp-alt-text-effect-field { float: none; min-width: 0; margin-right: 0; padding-top: 0; text-align: left; }
+
+.attachment-alt-text > .neo-alt--wp-alt-text-integration { width: 500px; max-width: 100%; }
+.components-base-control__field > .neo-alt--wp-alt-text-integration { width: 100%; }
+.components-base-control__field:has(> .neo-alt--wp-alt-text-integration-sibling) > textarea.components-textarea-control__input { padding-right: 34px !important; box-sizing: border-box; }
